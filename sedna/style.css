@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    --white-color:#ffffff;
+    --button-color:#ff5274;
+    --text-heading-color:#3d4351;
+    --text-color:rgba(28, 54, 83, 0.7);
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header{
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.header a{
+    font-size: 13px;
+}
+
+.header .header-wrapper{
+    position: relative;
+    padding: 48px 0px;
+    margin: 0 auto;
+    max-width: 1000px;
+    border-bottom: 1px solid lightslategray;
+}
+
+.header .logo{
+    position: absolute;
+}
+
+.nav .header-menu{
+    position: absolute;
+    left:200px;
+}
+
+.nav .header-menu li{
+    display: inline-block;
+    list-style: none;
+    padding-left: 19px;
+}
+
+.nav .header-menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.nav .header-menu a:hover{
+    color: lightslategray;
+}
+
+.nav .header-actions{
+    position: absolute;
+    right: 0px;
+}
+
+.nav .header-actions li{
+    display: inline-block;
+    list-style: none;
+    padding-left: 19px;
+}
+
+.nav .header-actions a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.nav .header-actions a:hover{
+    color: lightslategray;
+}
+
+.nav .header-actions .signup{
+    border: 2px solid var(--white-color);
+    border-radius: 40px;
+    padding: 6px 25px;
+}
+
+.nav .header-actions .signup:hover{
+    background-color: white;
+    color: lightslategray;
+}
+
+.hero{
+    width: 100%;
+    background-image: linear-gradient(rgba(38, 43, 57, 0.9),rgba(38, 43, 57, 0.9)),url('images/hero-image-one.png');
+    height: 100vh
+}
+
+.hero h1{
+    position: relative;
+    top: 32%;
+    text-align: center;
+    font-size: 60px;
+    color: var(--white-color);
+    font-weight: normal;
+}
+
+.hero p{
+    position: relative;
+    top: 34%;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+}
+
+.hero .button-wrapper{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    top: 48%;
+}
+
+.hero .button-wrapper .download{
+    background-color: var(--button-color);
+    color: var(--white-color);
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 18px 34px;
+    border:2px solid var(--button-color);
+}
+
+.hero .button-wrapper .download:hover{
+    color: var(--button-color);
+    background-color: transparent;
+}
+
+.hero .button-wrapper .learn{
+    border: 2px solid var(--button-color);
+    color: var(--button-color);
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 17px 64px;
+    margin-left:15px;
+}
+
+.hero .button-wrapper .learn:hover{
+    color: var(--white-color);
+    background-color: var(--button-color);
+}
+
+.hero .angle-down{
+    position: absolute;
+    left: 49%;
+    bottom: 20px;
+    color: var(--white-color);
+    font-size: 35px;
+}
+
+
+main{
+    
+}
+
+.features-section{
+    background-color: var(--white-color);
+    height: 370px;
+}
+
+.features-wrapper{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.feature li{
+    padding-top: 120px;
+    /* padding-right: 20px; */
+    /* padding-left: 20px; */
+    margin-left: 50px;
+    list-style: none;
+    float: left;
+    width: 350px;
+    min-height: 370px;
+}
+
+.feature figure{
+    position: absolute;
+}
+
+.feature h3{
+    display: inline-block;
+    position: relative;
+    color: var(--text-heading-color);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.feature p{
+    position: relative;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.67;
+    color:var(--text-color);
+    padding-right: 50px;
+}
+
+.feature .one h3{
+    left: 54px;
+}
+
+.feature .one p{
+    left: 54px;   
+}
+
+.feature .two h3{
+    left: 40px;
+}
+
+.feature .two p{
+    left: 40px;
+}
+.feature .three h3{
+    left: 50px; 
+}
+
+.feature .three p{
+    left: 50px;
+}
+
+.product-section{
+    background-color: #f7f8fa;
+    height: 760px;
+    position: relative;
+}
+
+.mobile-container{
+    top: 0;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: royalblue;
+}
+
+
+

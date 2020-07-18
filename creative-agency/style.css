@@ -19,8 +19,9 @@ body{
 
 .header img{
     position: relative;
-    top: 30%;
-    left: 10%;
+    top:40%;
+    left: 12%;
+    z-index: 20;
 }
 
 .home{
