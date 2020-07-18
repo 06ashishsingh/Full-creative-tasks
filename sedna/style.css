@@ -91,7 +91,7 @@ body{
 .hero{
     width: 100%;
     background-image: linear-gradient(rgba(38, 43, 57, 0.9),rgba(38, 43, 57, 0.9)),url('images/hero-image-one.png');
-    height: 100vh
+    height: 100vh;
 }
 
 .hero h1{
@@ -239,11 +239,26 @@ main{
 
 .mobile-container{
     top: 0;
-    width: 50%;
+    width: 48%;
     height: 100%;
     position: absolute;
-    background-color: royalblue;
 }
 
+.ipad-image{
+    position: absolute;
+    top: 118px;
+    clip-path: inset(0px 0px 359px 0px);
+}
 
+.iphone-image{
+    position: absolute;
+    max-width: 304px;
+    top: 350px;
+    right: 0;
+    clip-path: inset(0px 0px 206px 0px);
+}
 
+.sketch-section{
+    position: relative;
+    height: 100vh;
+}
