@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -176,13 +177,10 @@ main{
 
 .feature li{
     padding-top: 120px;
-    /* padding-right: 20px; */
-    /* padding-left: 20px; */
     margin-left: 50px;
     list-style: none;
     float: left;
     width: 350px;
-    min-height: 370px;
 }
 
 .feature figure{
@@ -190,7 +188,6 @@ main{
 }
 
 .feature h3{
-    display: inline-block;
     position: relative;
     color: var(--text-heading-color);
     text-transform: uppercase;
@@ -245,20 +242,216 @@ main{
 }
 
 .ipad-image{
-    position: absolute;
+    position: relative;
     top: 118px;
-    clip-path: inset(0px 0px 359px 0px);
+    height: 642px;
 }
 
 .iphone-image{
     position: absolute;
     max-width: 304px;
     top: 350px;
+    right: 0px;
+}
+
+.text-container{
+    position: absolute;
+    padding: 113px 150px;
     right: 0;
-    clip-path: inset(0px 0px 206px 0px);
+    width: 50%;
+    height: 100%;
+}
+
+.text-container h2{
+    color: var(--text-heading-color);
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.text-container h3{
+    font-size: 15px;
+    color: var(--text-heading-color);
+    font-weight: normal;
+}
+
+.text-container p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.67;
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+.text-container .product-features{
+    list-style: none;
+    margin-top: 58px;
+}
+
+.product-features li{
+    margin-top: 20px;
+    border-bottom: 1px solid #e6e9ea;
+}
+
+.product-features li:last-child{
+    border-bottom: 0px;
+}
+
+.product-features li img{
+    position: absolute;
+}
+
+.product-features li h3{
+    margin-left: 52px;
+}
+
+.product-features li p{
+    margin-top: 5px;
+    margin-left: 52px;
+    margin-bottom: 21px;
 }
 
 .sketch-section{
     position: relative;
-    height: 100vh;
+    height: 760px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+}
+
+.sketch-section figure{
+    float: right;
+}
+
+.sketch-section article{
+    width: 500px;
+    margin-left: 280px;
+}
+
+.sketch-section article h2{
+    display: inline-block;
+    margin-top:40px;
+    font-size: 24px;
+    font-weight: normal;
+    color: var(--text-heading-color);
+    margin-bottom: 20px;
+}
+
+.sketch-section article p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.67;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.sketch-section article a{
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--button-color);
+    font-size: 13px;
+    font-weight: 600;
+    border: 2px solid var(--button-color);
+    border-radius: 40px;
+    padding: 10px 35px;
+}
+
+.sketch-section article a:hover{
+    background-color: var(--button-color);
+    color: var(--white-color);
+}
+
+.customise-sedna{
+    position: relative;
+    text-align: center;
+    background-color: #3d4351;
+    height: 500px;
+}
+
+.customise-sedna h2{
+    position: relative;
+    top: 100px;
+    font-size: 40px;
+    font-weight: 300;
+    color:var(--white-color);
+}
+.customise-sedna p{
+    position: relative;
+    top: 127px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.56;
+    color: #acb1b4;
+}
+
+.customise-sedna a{
+    position: relative;
+    top: 180px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 2.3;
+    color: var(--button-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid var(--button-color);
+    border-radius: 40px;
+    padding: 15px 30px;
+}
+
+.customise-sedna a:hover{
+    background-color: var(--button-color);
+    color: var(--white-color);
+}
+
+.customise-sedna figure{
+    position: relative;
+    height: 230px;
+    top: 250px;
+}
+
+
+.showcase{
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.showcase h2{
+    position: relative;
+    left: 200px;
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.showcase-content{
+    position: relative;
+    margin-left: 200px;
+    margin-top:80px;
+    float: left;
+}
+
+.one{
+    width: 520px;
+}
+
+.two{
+    margin-left: 97px;
+    width: 520px;
+}
+
+.showcase-content h3{
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-heading-color);
+}
+
+.showcase-content p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 2;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.clear-float{
+    clear: both;
 }
