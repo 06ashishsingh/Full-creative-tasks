@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-wrapper">
             <a href="" class="logo"><img src="images/sedna-logo.svg" alt=""></a>
             <nav class="nav">
@@ -21,7 +21,7 @@
                 </ul>
                 <ul class="header-actions">
                     <li><a href="">Log In</a></li>
-                    <li><a href="" class="signup">Sign Up</a></li>
+                    <li><a href="#signup-section" class="signup">Sign Up</a></li>
                 </ul>
             </nav>
         </div> 
@@ -114,7 +114,7 @@
                     <p>
                     Nam vehicula malesuada lectus, <span style="color:#ff5274;">interdum</span> fringilla nibh. Duis aliquam vitae metus a pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum augue quis augue ornare, eget faucibus felis pharetra. Proin condimentum et leo quis fringilla. 
                     </p>
-                    <a href="Javascript:void(0)">Whats Skecth?</a>
+                    <a href="Javascript:void(0)">What's Skecth?</a>
                 </article>
             </section>
 
@@ -130,20 +130,91 @@
             <section class="showcase-section">
                 <article class="showcase">
                     <h2>Showcase your smashing product with Sedna</h2>
-                    <div class="showcase-content one">
+                    <div class="showcase-content first">
                         <h3>EXCLUSIVE TO CODROPS</h3>
                         <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
-                    <div class="showcase-content two">
+                    <div class="showcase-content second">
                         <h3>SPREADING PIXELS AROUND THE WORLD</h3>
                         <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                     <div class="clear-float"></div>
                 </article>
+                <article class="news-article">
+                    <div class="news">
+                        <figure>
+                            <img src="images/sky.png" alt="">
+                        </figure>
+                        <h4>PRODUCT</h4>
+                        <a href="Javascript:void(0)">Getting started with Sedna <span style="margin-left: 5px;"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                    </div>
+                    <div class="news">
+                        <figure>
+                            <img src="images/plant.png" alt="">
+                        </figure>
+                        <h4>TECHNOLOGY</h4>
+                        <a href="Javascript:void(0)">Why IE8 support is deminishing<span style="margin-left: 5px;"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                    </div>
+                    <div class="news">
+                        <figure>
+                            <img src="images/galaxy.png" alt="">
+                        </figure>
+                        <h4>PRODUCT</h4>
+                        <a href="Javascript:void(0)">Sedna tutorial: How to begin your...<span style="margin-left: 5px;"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                    </div>
+                    <a class="more-news" href="Javascript:void(0)">More News</a>
+                </article>
+            </section>
+            
+            <section class="slide-show">
+                <figure>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </figure>
+                <a href="" class="left"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                <a href="" class="right"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <q>Sedna is crucial to our workflow</q>
+                <p>PETER FINLAN, CEO OF AWESOMESAUCE TECHNOLOGIES</p>
             </section>
 
+            <section id="signup-section" class="signup-section">
+                <h3>Get started with Sedna, absolutely free</h3>
+                <p>Grab your copy today, exclusively from Codrops</p>
+                <form action="#">
+                    <div class="email-container">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <input class="email-field" type="text" placeholder="Enter your email">
+                    </div>
+                    <div class="password-container">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input class="password-field" type="password" placeholder="Enter your password">
+                    </div>
+                    <button class="signup-button">Sign up for free</button>
+                </form>
+            </section>
 
+            <section class="navigate-top">
+                <a href="#header"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+            </section>
         </article>
     </main>
+    <footer>
+        <div class="left-side">
+            <ul>
+                <li><a href="">FEATURES</a></li>
+                <li><a href="">PRICING</a></li>
+                <li><a href="">SIGN UP</a></li>
+                <li><a href="">LICENCE</a></li>
+                <li><a href="">CODROPS</a></li>
+                <li><a href="">PETER FINLAN</a></li>
+            </ul>
+            <p>Copyright © 2015 Sedna <br>
+             Licence | Design & Developed by Peter Finlan</p>
+        </div>
+        <div class="right-side">
+            <h4>SHARE SEDNA WITH YOUR FRIENDS</h4>
+            <a href="" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </div>
+    </footer>
 </body>
 </html>
