@@ -9,53 +9,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
+    <header class="header" id="header">
+        <div class="header-wrapper">
             <a href="" class="logo"><img src="images/sedna-logo.svg" alt=""></a>
-            <nav class="nav-left">
-                <a href="">Features</a>
-                <a href="">Assets</a>
-                <a href="">Blog</a>
-                <a href="">Download</a>
-            </nav>
-            <nav class="nav-right">
-                <a href="">Log In</a>
-                <a href="">Sign Up</a>
+            <nav class="nav">
+                <ul class="header-menu">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="Javascript:void(0)">Assets</a></li>
+                    <li><a href="Javascript:void(0)">Blog</a></li>
+                    <li><a href="Javascript:void(0)">Download</a></li>
+                </ul>
+                <ul class="header-actions">
+                    <li><a href="">Log In</a></li>
+                    <li><a href="#signup-section" class="signup">Sign Up</a></li>
+                </ul>
             </nav>
         </div> 
     </header>
+
     <section class="hero">
-        <div class="hero-container">
-            <h1>Design, collaborate, win.</h1>
-            <p>Introducing “Sedna”. A responsive one page website, designed & developed by Peter Finlan, <br> exclusively for Codrops.</p>
-            <div class="button-wrapper">
-                <a href="#" class="btn-primary download">Download for free</a>
-                <a href="#" class="btn-primary learn">Learn more</a>
-            </div>
+        <h1>Design, collaborate, win.</h1>
+        <p>Introducing “Sedna”. A responsive one page website, designed & developed by Peter Finlan, <br> exclusively for Codrops.</p>
+        <div class="button-wrapper">
+            <a href="#" class="download">Download for free</a>
+            <a href="#" class="learn">Learn more</a>
         </div>
-        <a href="" class="angle-down"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+        <a href="" class="angle-down"><i class="fa fa-angle-down" aria-hidden="true"></i></i></a>
     </section>
-    
+
     <main>
         <article>
-            <section class="features">
-                <div class="feature-container">
-                    <ul class="feature-list">
-                        <li>
+            <section id="features" class="features-section">
+                <div class="features-wrapper">
+                    <ul class="feature">
+                        <li class="one">
                             <figure>
                                 <img src="images/pencil-icon.svg" alt="icon">
                             </figure>
                             <h3>EASILY CUSTOMISED</h3>
                             <p>Easily customise Sedna to suit your start up, portfolio or product. Take advantage of the layered Sketch file and bring your product to life.</p>
                         </li>
-                        <li>
+                        <li class="two">
                             <figure>
                                 <img src="images/bulb-icon.svg" alt="icon">
                             </figure>
                             <h3>MODERN DESIGN</h3>
                             <p>Designed with modern trends and techniques in mind, Sedna will help your product stand out in an already saturated market. </p>
                         </li>
-                        <li>
+                        <li class="three">
                             <figure>
                                 <img src="images/react-icon.svg" alt="icon">
                             </figure>
@@ -67,13 +68,15 @@
             </section>
 
             <section class="product-section">
-                <figure>
-                    <img src="images/ipad-air.png" alt="">
-                    <img src="images/iphone-six.png" alt="">
-                </figure>
+                <div class="mobile-container">
+                    <figure>
+                       <img class="ipad-image" src="images/ipad-air.png" alt="">
+                       <img class="iphone-image" src="images/iphone-six.png" alt="">
+                    </figure>
+                </div>
                 <div class="text-container">
                     <h2>Sedna will drive your product forward</h2>
-                    <p>Present your product, start up, or portfolio in a beautifully <br> modern way. Turn your visitors in to clients.</p>
+                    <p>Present your product, start up, or portfolio in a beautifully modern way. Turn your visitors in to clients.</p>
                     <ul class="product-features">
                         <li>
                             <figure>
@@ -104,79 +107,79 @@
                 <figure>
                     <img src="images/macbook-pro.png" alt="">
                 </figure>
-                <div class="sketch-wrapper">
+                <article>
                     <h2>Designed using Sketch!</h2>
                     <p>Easily change/switch/swap every placeholder inside every image on Sedna with the included Sketch files. You’ll have this template customised to suit your business in no time! 
                     </p>
                     <p>
                     Nam vehicula malesuada lectus, <span style="color:#ff5274;">interdum</span> fringilla nibh. Duis aliquam vitae metus a pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum augue quis augue ornare, eget faucibus felis pharetra. Proin condimentum et leo quis fringilla. 
                     </p>
-                    <a href="" class="btn-secondary">What's Skecth?</a>
-                </div>
+                    <a href="Javascript:void(0)">What's Skecth?</a>
+                </article>
             </section>
 
             <section class="customise-sedna">
                 <h2>Customise Sedna with the included Sketch file</h2>
                 <p>Change/swap/edit every aspect of Sedna before you hit development with the included Sketch file.</p>
-                <a href="" class="btn-primary">Download Now!</a>
+                <a href="">Download Now!</a>
                 <figure>
                     <img src="images/sketch-logo.png" alt="sketch-logo">
                 </figure>
             </section>
 
             <section class="showcase-section">
-                <div class="showcase-container">
+                <article class="showcase">
                     <h2>Showcase your smashing product with Sedna</h2>
-                    <div class="showcase-content">
+                    <div class="showcase-content first">
                         <h3>EXCLUSIVE TO CODROPS</h3>
                         <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
-                    <div class="showcase-content">
+                    <div class="showcase-content second">
                         <h3>SPREADING PIXELS AROUND THE WORLD</h3>
                         <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
-                </div>
-                <div class="news-section">
+                    <div class="clear-float"></div>
+                </article>
+                <article class="news-article">
                     <div class="news">
                         <figure>
                             <img src="images/sky.png" alt="">
                         </figure>
                         <h4>PRODUCT</h4>
-                        <a href="">Getting started with Sedna <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                        <a href="Javascript:void(0)">Getting started with Sedna <span style="margin-left: 5px;"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
                     </div>
                     <div class="news">
                         <figure>
                             <img src="images/plant.png" alt="">
                         </figure>
                         <h4>TECHNOLOGY</h4>
-                        <a href="">Why IE8 support is deminishing<span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                        <a href="Javascript:void(0)">Why IE8 support is deminishing<span style="margin-left: 5px;"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
                     </div>
                     <div class="news">
                         <figure>
                             <img src="images/galaxy.png" alt="">
                         </figure>
                         <h4>PRODUCT</h4>
-                        <a href="" class="">Sedna tutorial: How to begin your...<span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                        <a href="Javascript:void(0)">Sedna tutorial: How to begin your...<span style="margin-left: 5px;"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
                     </div>
-                    <a class="btn-secondary more-news" href="">More News</a>
-                </div>
+                    <a class="more-news" href="Javascript:void(0)">More News</a>
+                </article>
             </section>
-
+            
             <section class="slide-show">
-                <div class="slide-container">
-                    <figure>
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                    </figure>
-                    <q>Sedna is crucial to our workflow</q>
-                    <p>PETER FINLAN, CEO OF AWESOMESAUCE TECHNOLOGIES</p>
-                </div>
+                <figure>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </figure>
                 <a href="" class="left"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
                 <a href="" class="right"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <q>Sedna is crucial to our workflow</q>
+                <p>PETER FINLAN, CEO OF AWESOMESAUCE TECHNOLOGIES</p>
             </section>
 
             <section id="signup-section" class="signup-section">
                 <h3>Get started with Sedna, absolutely free</h3>
                 <p>Grab your copy today, exclusively from Codrops</p>
+                <form action="#">
                     <div class="email-container">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                         <input class="email-field" type="text" placeholder="Enter your email">
@@ -186,15 +189,14 @@
                         <input class="password-field" type="password" placeholder="Enter your password">
                     </div>
                     <button class="signup-button">Sign up for free</button>
+                </form>
             </section>
 
             <section class="navigate-top">
                 <a href="#header"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
             </section>
-
         </article>
     </main>
-
     <footer>
         <div class="left-side">
             <ul>
