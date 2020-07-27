@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="447px" height="199px" viewBox="0 0 447 199" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>8E7CC29A-078D-448E-ADAA-A595C3EA6764</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="34" y="36" width="339" height="140" rx="3"></rect>
+        <filter x="-8.1%" y="-14.6%" width="116.2%" height="139.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="14" y="21" width="387" height="139" rx="3"></rect>
+        <filter x="-7.1%" y="-14.7%" width="114.2%" height="139.6%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-5" x="0" y="13" width="415" height="131" rx="3"></rect>
+        <filter x="-6.6%" y="-15.6%" width="113.3%" height="142.0%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ziurby" transform="translate(-731.000000, -883.000000)">
+            <g id="section-1" transform="translate(0.000000, 748.000000)">
+                <g id="Group-5" transform="translate(203.000000, 131.000000)">
+                    <g id="Group-9" transform="translate(544.000000, 4.000000)">
+                        <g id="Group-7">
+                            <g id="Rectangle-2">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            </g>
+                            <g id="Rectangle-2">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                                <use fill="#F3F3F3" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            </g>
+                            <g id="Rectangle-2">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                            </g>
+                            <g id="Group-8" transform="translate(34.000000, 0.000000)">
+                                <rect id="Rectangle-3" fill="#00D5A6" x="0" y="0" width="100" height="25" rx="3"></rect>
+                                <text id="TEXT" font-family="SourceSansPro-Bold, Source Sans Pro" font-size="14" font-weight="bold" fill="#FFFFFF">
+                                    <tspan x="35.051" y="17">TEXT</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <text id="Lorem-Ipsum-is-simpl" font-family="SourceSansPro-Bold, Source Sans Pro" font-size="14" font-weight="bold" line-spacing="35" fill="#33325F">
+                            <tspan x="35" y="51">LOREM IPSUM IS SIMPLY DUMMY</tspan>
+                        </text>
+                        <text id="Lorem-Ipsum-is-simpl" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="20" fill="#2B2B2B">
+                            <tspan x="35" y="86">Lorem Ipsum is simply dummy text of the printing and </tspan>
+                            <tspan x="35" y="106">typesetting industry.</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
