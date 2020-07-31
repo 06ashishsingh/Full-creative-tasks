@@ -1,4 +1,10 @@
 
+.nav a{
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: #6c7178;
+}
+
 #hero{
     height: 657px;
     background: url('https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1980&q=80') no-repeat center;
@@ -19,7 +25,7 @@
     color: #000000;
 }
 
-a{
+.link{
     font-size: 24px;
     font-weight: 300px;
     line-height: 1.17;
@@ -28,7 +34,7 @@ a{
     color: #797979;
 }
 
-a:hover{
+.link:hover{
     color: #000000;
 }
 
