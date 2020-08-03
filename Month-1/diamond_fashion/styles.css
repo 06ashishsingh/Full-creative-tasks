@@ -1,22 +1,47 @@
+@font-face{
+    font-family: 'GillSans';
+    src: url('fonts/Gill_Sans.woff');
+}
+
+body{
+    font-family: 'Baskervville', serif;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    font-family: 'GillSans',sans-serif;
+}
 
 .nav a{
+    font-family: 'GillSans',sans-serif;
     font-size: 18px;
     letter-spacing: 0.5px;
     color: #6c7178;
 }
 
-#hero{
+.navbar {
+    font-size: 24px;
+}
+
+.form-search-icon{
+    position: absolute;
+}
+
+.jumbotron{
     height: 657px;
     background: url('https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1980&q=80') no-repeat center;
 }
 
-#hero p{
+.jumbotron p{
     font-size: 22px;
+    font-family: 'GillSans',sans-serif;
 }
 
 .heading{
     font-size: 56px;
-    font-family: 'Baskervville', serif;
 }
 
 .heading-description{
@@ -44,7 +69,100 @@
     color: #000000;
 }
 
-#perfection h3{
+.stylers{
     font-size: 22px;
     color: #868686;
+}
+
+.more-colors{
+    font-family: 'GillSans',sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #a8a8a8;
+}
+
+.more-colors a{
+    color: #a8a8a8;
+}
+
+.style-1 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #6c7178;
+}
+
+
+.contact-links h3{
+    font-size: 38px;
+}
+
+.contact-links a{
+    color: #797979;
+    text-decoration: underline;
+}
+
+.contact-links p{
+    font-family: 'GillSans',sans-serif;
+    font-size: 24px;
+    line-height: 1.33;
+    color: #4d4d4d;
+}
+
+footer{
+    background-color:  #f9f8f6;
+}
+
+footer .list-heading{
+    font-size: 32px;
+    color: #444444;
+}
+
+
+footer ul a{
+    font-size: 24px;
+    color: #949494;
+    line-height: 2;
+}
+
+footer ul a:hover{
+    color: #949494;
+}
+
+.social-media{
+    color: #b2b2b2;
+    font-size: 24px;
+}
+
+.copyright{
+    font-family: 'GillSans',sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.17px;
+    color: #b2b2b2;
+}
+
+.newsletter a{ 
+    color: #a8a8a8;
+}
+
+.logo a{
+    font-family: 'Open Sans', sans-serif;
+    color: #797979;
+    font-size: 22px;
+}
+
+.logo .upper{
+    color: #000000;
+}
+
+.logo a:hover{
+    text-decoration: none;
+}
+
+.logo i{
+    color: #797979;
+}
+
+.logo p{
+    color: #797979;
 }
