@@ -22,12 +22,19 @@ p{
     color: #6c7178;
 }
 
+.fa-search{
+    position: absolute;
+    color: #6c7178;
+    font-size: 15px;
+}
+
 .navbar {
     font-size: 24px;
 }
 
-.form-search-icon{
-    position: absolute;
+.navbar a,i{
+    color: #6c7178;
+    font-family:'GillSans',sans-serif;
 }
 
 .jumbotron{
