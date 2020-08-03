@@ -37,6 +37,10 @@ p{
     font-family:'GillSans',sans-serif;
 }
 
+.navbar a:hover{
+    text-decoration: none;
+}
+
 .jumbotron{
     height: 657px;
     background: url('https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1980&q=80') no-repeat center;
