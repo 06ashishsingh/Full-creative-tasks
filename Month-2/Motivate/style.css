@@ -1,0 +1,102 @@
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+header li a{
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #007fff;
+}
+
+.logo-image{
+    position: relative;
+    left: 40%;
+    transform: translate(-40%,0);
+}
+
+.fa-bars{
+    color: #007fff;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+h1{
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+h1 span{
+    color: #007fff;
+}
+
+.section-heading{
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #979797;
+    text-transform: uppercase;
+}
+
+h2{
+    font-family: Nunito;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.29;
+}
+
+h3{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.07;
+}
+
+p{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.88;
+}
+
+.featured{
+    color: #000000;
+    font-size: 12px;
+    font-weight: 800;
+    background-color:#ffe300;
+}
+
+p span{
+    color: #007fff;
+}
+
+.list-item{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.88;
+    color: #007fff;
+}
+
+.list-item span{
+    color: #979797;
+}
+
+label{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    color: #000000;
+}
+
+footer a{
+    color: #979797;
+}
