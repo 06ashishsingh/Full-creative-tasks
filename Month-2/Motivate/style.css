@@ -92,11 +92,25 @@ p span{
 label{
     font-size: 12px;
     text-transform: uppercase;
+    font-weight: 900; 
     letter-spacing: 3px;
-    font-weight: 800;
-    color: #000000;
+}
+
+::placeholder{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.88;
+    color: #cfcfcf;
+}
+
+textarea{
+    resize: none;
 }
 
 footer a{
+    color: #979797;
+}
+
+footer a:hover{
     color: #979797;
 }
