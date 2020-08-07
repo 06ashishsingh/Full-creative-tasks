@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,input,button{
+    font-family: 'Lato', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1b7dff;
+}
+
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.container-fluid{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    margin: 20px 0px;
+}
+
+h3{
+    font-size: 35px;
+    font-weight: 500;
+    color: #102746;
+}
+
+.fa-long-arrow-right{
+    margin-left: 20px;
+}
+
+/* hero styles*/
+
+.hero{
+    position: relative;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.55);
+    overflow: hidden;
+}
+
+.hero-video-background{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.hero .container{
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+}
+
+.hero h1{
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+}
+
+.hero p{
+    color: white;   
+}
+
+form{
+    margin: 20px 0px;
+}
+
+.fa-circle-o{
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+}
+
+input{
+    padding: 10px 30px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: 0;
+    min-width: 280px;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+input:focus{
+    outline: none;
+}
+
+::placeholder{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+.hero button{
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    background-color: #1b7dff;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+
+.hero button:focus{
+    outline: none;
+}
+/* hero styles ending */
+
+
+/* benefits-item */
+
+.benefits-item{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;
+    padding: 40px 0px;
+    background-color: white;
+    box-shadow: 0 2px 20px 0 rgba(21, 24, 36, 0.16);
+}
+
+.benefits-item .container{
+    max-width: 90%;
+}
+
+.benefits-list img{
+    max-width: 44px;
+}
+
+.benefits-list li{
+    margin-top: 50px;
+}
+
+.benefits-list h4{
+    font-size: 18px;
+    margin: 20px 0px;
+}
+
+.benefits-list i{
+    margin-left: 20px;
+}
+
+/* benefits-item ending */
+
+
+/* main styles */
+.inspired-section{
+    margin-top: 950px;
+}
+
+.inspired-section a{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.inspired-section img{
+    position: relative;
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    z-index: -1;
+}
+
+.image-container{
+    text-align: center;
+    position: relative;
+}
+
+.inspired-section h2{
+    background-color: rgba(0, 0, 0, 0.25);
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.perfecture-section{
+    padding:100px 0px;
+}
+
+.perfecture-section img{
+    max-width: 100%;
+}
+
+.prefecture-text{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.top-places a{
+    padding: 12px 30px;
+    background-color: #1b7dff;
+    color: white;
+}
+
+.post{
+    margin: 50px 0px;
+}
+
+.post img{
+    max-width: 100%;
+}
+
+.post p{
+    padding-right: 40px;
+}
+
+.video-section{
+    overflow: hidden;
+    position: relative;
+    height: 80vh;
+}
+
+.video-section video{
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* footer styles */
+footer{
+    background-color: #0e1d28;
+    padding: 100px 0px;
+}
+
+footer h5{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: white;
+}
+
+footer a{
+    color: white;
+    text-transform: capitalize;
+}
+
+footer img{
+    width: 150px;
+}
+
+footer ul{
+    margin-top: 50px;
+}
