@@ -13,6 +13,7 @@ ul{
 }
 
 a{
+    position: relative;
     display: inline-block;
     margin-top: 10px;
     text-decoration: none;
@@ -20,6 +21,23 @@ a{
     font-size: 16px;
     line-height: 1.5;
     color: #1b7dff;
+}
+
+a::after{
+    border-bottom: 1px solid #1b7dff;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    -webkit-transition: right .4s;
+    -moz-transition: right .4s;
+    -o-transition: right .4s;
+    transition: right .4s;
+}
+
+a:hover::after {
+    right: 0;
 }
 
 .container{
@@ -280,3 +298,5 @@ footer img{
 footer ul{
     margin-top: 50px;
 }
+
+
