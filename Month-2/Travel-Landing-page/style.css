@@ -91,7 +91,7 @@ img:hover{
 header{
     position: absolute;
     width: 100%;
-    padding: 20px 50px;
+    padding: 20px 30px;
     z-index: 2;
 }
 
@@ -385,6 +385,9 @@ footer ul{
 
 /* styles for smaller tablets */
 @media only screen and (min-width:481px) and (max-width:768px){
+    header{
+        padding: 30px 80px;
+    }
     
     .hero__form-group{
         margin-bottom: 10px;
@@ -437,6 +440,10 @@ footer ul{
 }
 
 @media only screen and (min-width:769px) and (max-width:1079px){
+
+    header{
+        padding: 30px 100px;
+    }
 
     .hero__form-group{
         display: inline-block;
