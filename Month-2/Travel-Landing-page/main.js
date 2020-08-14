@@ -1,46 +1,38 @@
-let menuButton = document.querySelector('i');
-let menu = document.querySelector('.menu');
-let show = false;
+const header = document.querySelector('header');
+const menuButton = document.getElementById('menu-button');
+const navigation = document.querySelector('.navigation');
+const closeButton = document.getElementById('close');
+const headerLinks = document.querySelectorAll('#nav-link');
 
-menuButton.addEventListener("click",function(){
-    if(show===false)
+window.onscroll =  function(){
+
+    if(document.documentElement.scrollTop >=100)
     {
-        menu.style.display='block';
-        document.body.style.overflow='hidden';
-        show=true;
-    } 
-    else if(show===true)
-    {
-        menu.style.display='';
-        document.body.style.overflow='';
-        show=false;
+        header.classList.add('header-colored');
+        header.classList.remove('header-transparent');
     }
+    else{
+        header.classList.remove('header-colored');
+        header.classList.add('header-transparent');
+    }
+}
+
+menuButton.addEventListener('click',function(){
+    navigation.classList.add('show');
+    document.body.style.overflow='hidden';
 });
 
-let menuLinks = menu.getElementsByTagName('a');
-
-menuLinks[0].addEventListener('click',function(){
-    let articles = document.querySelector('.featured');
-    articles.scrollIntoView({
-        behavior:'smooth'
-    });
+closeButton.addEventListener('click',function(){
+    navigation.classList.remove('show');
     document.body.style.overflow='';
 });
 
-menuLinks[1].addEventListener('click',function(){
-    let locations = document.querySelector('.locations');
-    locations.scrollIntoView({
-        behavior:'smooth'
-    });
-    document.body.style.overflow='';
-});
-
-menuLinks[2].addEventListener('click',function(){
-    let video = document.querySelector('.video-section');
-    video.scrollIntoView({
-        behavior:'smooth'
-    });
-    document.body.style.overflow='';
-})
-
-
+for(let i=0;i<headerLinks.length;i++)
+{
+    headerLinks[i].addEventListener('click',function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior:'smooth'
+        });
+    })
+}

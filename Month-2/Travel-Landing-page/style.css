@@ -54,6 +54,17 @@ hr{
     height: 2px;
 }
 
+/* animation */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 /* custom styles */
 
 .clearfix::after{
@@ -93,12 +104,20 @@ h2{
 /* header */
 
 header{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,0%);
-    padding: 30px 0px;
+    position: fixed;
     width: 100%;
+    padding: 30px 0px;
     z-index: 1;
+}
+
+.header-colored{
+    background-color:black;
+    transition: 0.3s ease-in;
+}
+
+.header-transparent{
+    background-color: transparent;
+    transition: 0.3s ease-in;
 }
 
 header img{
@@ -113,25 +132,49 @@ header img{
 
 .menu{
     display: none;
-    margin-top: 50px;
-    padding: 60px 0px;
-    height: 90vh;
+}
+
+.navigation{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0,0,0,0.9);
+}
+
+.header-nav{
     text-align: center;
-    background-color: #102746;
-    transition: display 1s ease-in;
+    padding: 150px 0px;
 }
 
-.menu li{
+.header-nav a{
     margin-bottom: 50px;
+    font-size: 28px;
 }
 
-.menu li a{
-    font-size: 25px;
+.navigation i{
+    cursor: pointer;
+    position: absolute;
+    padding: 30px 50px 0px 0px;
+    right: 0;
+    font-size: 30px;
+}
+
+.show{
+    display: block;
+    -webkit-animation: fade .4s ease-in;
+    -moz-animation: fade .4s ease-in;
+    -o-animation: fade .4s ease-in;
+    animation: fade .4s ease-in;
 }
 
 /* hero styles */
 .hero{
     position: relative;
+    top: 0;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.55);
     overflow: hidden;
@@ -154,7 +197,7 @@ header img{
 }
 
 .hero h1{
-    font-size: 28px;
+    font-size: 50px;
     font-weight: 500;
     color: white;
 }
@@ -169,6 +212,10 @@ header img{
     color: white;
     left: 0;
     margin-top: 12px;
+}
+
+.hero form{
+    display: none;
 }
 
 input{
@@ -316,7 +363,7 @@ input:focus{
 
 .places__post img{
     min-width: 100%;
-    max-width: 100%;
+    width: 100%;
 }
 
 .places__post div{
@@ -356,18 +403,6 @@ input:focus{
     height: 80vh;
 }
 
-.fa-play{
-    position: absolute;
-    z-index: 2;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 50px;
-    background-color: white;
-    padding: 10px 10px 10px 20px;
-    border-radius: 50%;
-}
-
 .video-section video{
     min-width: 100%;
     min-height: 100%;
@@ -405,22 +440,11 @@ footer .link{
 }
 /* footer styles ending */
 
-
-@media only screen and (min-width:481px) and (max-width:768px){
-
-    .hero h1{
-        font-size: 40px;
-    }
-
-    .hero button{
-        display: block;
-        font-size: 24px;
-    }
-
-}
-
-
 @media only screen and (min-width:769px) and (max-width:1079px){
+
+    .hero form{
+        display: block;
+    }
 
     .hero__form-group{
         display: inline-block;
@@ -428,10 +452,6 @@ footer .link{
 
     input{
         margin-right: 50px;
-    }
-
-    .hero h1{
-        font-size: 50px;
     }
 
     .hero button{
@@ -466,14 +486,16 @@ footer .link{
 /* styles for larger screens */
 @media only screen and (min-width:1080px){
 
+    .hero form{
+        display: block;
+    }
+
     .fa-bars{
         display: none;
     }
 
     .menu{
         display: inline;
-        padding: 0;
-        background-color: transparent;
     }
 
     .menu ul{
@@ -489,6 +511,7 @@ footer .link{
 
     .menu li a{
         font-size: 16px;
+        margin-top: 5px;
     }
 
     .hero__form-group{
@@ -499,9 +522,6 @@ footer .link{
         margin-right: 50px;
     }
 
-    .hero h1{
-        font-size: 50px;
-    }
 
     .hero button{
         font-size: 24px;
@@ -581,7 +601,7 @@ footer .link{
     .featured__post img{
         margin-top: 0;
         max-height: 500px;
-        max-width: 45%;
+        width: 45%;
         min-width: 0%;
     }
 
