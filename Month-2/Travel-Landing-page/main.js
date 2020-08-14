@@ -2,11 +2,11 @@ const header = document.querySelector('header');
 const menuButton = document.getElementById('menu-button');
 const navigation = document.querySelector('.navigation');
 const closeButton = document.getElementById('close');
-const headerLinks = document.querySelectorAll('#nav-link');
+const headerLinks = document.querySelectorAll('.nav-link');
 
 window.onscroll =  function(){
-
-    if(document.documentElement.scrollTop >=100)
+    
+    if( document.body.scrollTop>=100 || document.documentElement.scrollTop >=100)
     {
         header.classList.add('header-colored');
         header.classList.remove('header-transparent');
