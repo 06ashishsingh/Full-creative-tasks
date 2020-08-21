@@ -60,18 +60,12 @@ header img{
     float: left;
 }
 
-.logo{
-    display: block;
-}
-
-.dark-logo{
-    display: none;
-}
-
+.logo,
 .show-logo{
     display: block;
 }
 
+.dark-logo,
 .remove-logo{
     display: none;
 }
