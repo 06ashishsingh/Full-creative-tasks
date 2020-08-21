@@ -60,6 +60,22 @@ header img{
     float: left;
 }
 
+.logo{
+    display: block;
+}
+
+.dark-logo{
+    display: none;
+}
+
+.show-logo{
+    display: block;
+}
+
+.remove-logo{
+    display: none;
+}
+
 header .brand{
     margin-top: 15px;
     margin-left: 15px;
@@ -260,6 +276,9 @@ main{
     margin: 15% auto;
     padding: 40px 40px 80px 40px;
     box-shadow: 0 15px 22px 0 rgba(0, 0, 0, 0.41);
+    -webkit-animation: popup .5s;
+    -moz-animation: popup .5s;
+    -o-animation: popup .5s;
     animation: popup .5s;
 }
 
@@ -286,7 +305,7 @@ main{
     background-image: linear-gradient(240deg,#3ff3c3,#189bfb);
 }
 
-.launching p{
+.launching h2{
     font-size: 40px;
     margin-bottom: 40px;
     color: white;
@@ -559,9 +578,7 @@ footer li a{
     .carousel{
         display: block;
         padding: 80px 0px;
-
         background-image: linear-gradient(242deg, #3ff3c3, #189bfb);
-        
     }
 
     .carousel h2{

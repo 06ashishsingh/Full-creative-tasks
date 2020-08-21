@@ -1,5 +1,6 @@
 const header = document.querySelector('#main-header');
-const logo = document.getElementById('logo');
+const logo = document.querySelector('.logo');
+const darkLogo = document.querySelector('.dark-logo');
 const accordianButtons = document.getElementsByClassName('accordian__button');
 const signUp = document.getElementById('sign-up');
 const modal = document.getElementById('modal');
@@ -13,11 +14,13 @@ function fixedHeader(){
     if(document.body.scrollTop >=720 || document.documentElement.scrollTop >= 720)
     {
         header.classList.add('header__colored');
-        logo.src = 'assets/healy-logo-dark.svg'
+        logo.classList.add('remove-logo');
+        darkLogo.classList.add('show-logo');
     }   
     else{
         header.classList.remove('header__colored');
-        logo.src = 'assets/healy-logo.svg'
+        darkLogo.classList.remove('show-logo');
+        logo.classList.remove('remove-logo');
     } 
 }
 
@@ -54,10 +57,10 @@ for(let i=0; i<accordianButtons.length;i++)
 
 
 signUp.addEventListener('click',function(){
-    let email = document.getElementById('email').value;
-    if(email)
+    let emailInputValue = document.getElementById('email').value;
+    if(emailInputValue)
     {
-        document.getElementById('emailId').innerHTML = email;
+        document.getElementById('emailId').innerHTML = emailInputValue;
         modal.style.display = 'block';    
         document.getElementById('email').value = '';
         document.body.style.overflow = 'hidden';
