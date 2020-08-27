@@ -1,0 +1,205 @@
+.benefit{
+    position: relative;
+    margin-top: -100px;
+
+    .container{
+        padding: 60px;
+        border-radius: 10px;
+        background-color: $primary-color;
+        box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+        
+        ul{
+            font-size: 0;
+        }
+
+        li{
+            vertical-align: top;
+            margin-right: 40px;
+            width: 30%;
+
+            figure {
+                display: inline-block;
+                padding: 20px 16px;
+                background-color: lighten(#1fdb84,40%);
+                border-radius: 6px;
+            }
+
+            h3{
+                margin: 26px 0px;
+            }
+
+            hr{
+                width: 60px;
+                margin-bottom: 18px;
+                border: 0px;
+                height: 2px;
+                background-color: $secondary-color;
+            }
+
+            p{
+                font-size: 16px;
+                line-height: 2;
+                color: #5b6c94;
+            }
+        }
+
+        & li:last-child{
+            margin-right: 0px;
+        }
+    }
+}
+
+
+.pricing{
+    padding: 150px 0px;
+    text-align: center;
+
+    .button-wrapper{
+        color: $secondary-color;
+        margin: 60px 0px;
+        font-size: 0;
+
+        .monthly-plan{
+            background-color: $primary-color;
+            border-radius: 5px 0px 0px 5px;
+        }
+        
+        .yearly-plan{
+            background-color: lighten($secondary-color,45%);
+            border-radius: 0px 5px 5px 0px;
+        }
+    }
+
+    .card-wrapper{
+
+        @include clearfix;
+
+        & > div{
+            height: 560px;
+            position: relative;
+            padding: 50px 0px;
+            float: left;
+            width: 33.3%;
+            color: $paragraph-color;
+
+            h4{
+                margin-bottom: 20px;
+            }
+
+            .price{
+                font-size: 72px;
+                color: $secondary-color;
+            }
+
+            .per-month{
+                margin-bottom: 50px;
+            }
+
+            ul{
+                margin-top: 60px;
+            }
+
+            li{
+                font-size: 16px;
+                display: block;
+                margin: 15px 0px;
+            }
+
+            .free-trial{
+                position: absolute;
+                bottom: 50px;
+                left: 50%;
+                @include translate(-50%,0);
+                letter-spacing: 1px;
+                color: $primary-color;
+                background-color: $secondary-color;
+                box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+            }
+        }
+    }
+}
+
+
+.testimonial{
+    overflow: hidden;
+    position: relative;
+    // @include clearfix;
+
+    .left{
+        margin-left: 10%;
+        float: left;
+        width: 40%;
+        position: relative;
+
+        h2{
+            margin: 40px 45px 0px 25px;
+            position: absolute;
+        }
+
+        img{
+            max-width: 370px;
+        }
+    }
+    
+    .right{
+        width: 50%;
+        height: 960px;
+        background-color: $primary-background;
+        float: right;
+
+        .testimonial-wrapper{
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: translate(0,-50%);
+
+            ul{
+                width: 2000px;
+                overflow: hidden;
+
+                li{
+                    margin-left: 40px;
+
+                    > div{
+                        display: inline-block;
+                        padding: 80px 50px;
+                        width: 420px;
+                        height: 500px;
+                        background-color: $primary-color;
+                        box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
+                        border-radius: 6px;
+                        font-size: 18px;
+
+                        p{
+                            color: $paragraph-color;
+                            line-height: 2;
+                            margin: 23px 0px;
+                        }
+
+                        .author{
+                            color: $heading-color;
+                            font-weight: $bold;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+.client{
+    padding: 100px 0px;
+    text-align: center;
+
+    h5{
+        // font-size: $normal;
+        margin-bottom: 50px;
+    }
+
+    li{
+        vertical-align: middle;
+        margin: 0px 47px 20px 0px;
+    }
+}

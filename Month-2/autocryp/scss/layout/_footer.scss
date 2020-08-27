@@ -1,0 +1,16 @@
+footer{
+    text-align: center;
+    background-color: $secondary-background;
+    padding: 50px 0px;
+    color: $paragraph-color;
+
+    p{
+        font-size: 16px;
+        line-height: 2;
+        margin-bottom: 50px;
+    }
+
+    a{
+        margin: 0px 20px;
+    }
+}

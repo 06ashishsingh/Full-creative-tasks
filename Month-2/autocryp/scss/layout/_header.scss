@@ -1,0 +1,39 @@
+header{
+    position: fixed;
+    padding: 25px 0px;
+    width: 100%;
+    z-index: 999;
+    color: $primary-color;
+
+    .container{
+       @include clearfix;
+    }
+
+    .brand{
+        float: left;
+        font-size: 26px;
+        font-weight: $bold;
+    }
+
+    nav{    
+        line-height: 2.5;
+        font-size: 16px;
+        text-align: center;
+
+        ul{
+            display: inline;
+        }
+
+        li{
+            margin-right: 38px;
+        }
+
+        .nav-right{
+            float: right;
+    
+            a{
+                margin-left: 38px;
+            }
+        }
+    }
+}

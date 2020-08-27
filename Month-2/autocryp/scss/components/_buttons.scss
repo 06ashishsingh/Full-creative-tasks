@@ -1,0 +1,20 @@
+button{
+    color: inherit;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 5px 0px 5px 0px;
+    outline: none;
+    border: solid 1px lighten($secondary-color,40%);
+    cursor: pointer;
+}
+
+
+.secondary-button{
+    font-weight: $bold;
+    background-color: $secondary-color;
+    padding: 10px 25px;
+    border-radius: 5px 0px 5px 0px;
+    box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);  
+}
