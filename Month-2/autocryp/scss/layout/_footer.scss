@@ -13,4 +13,17 @@ footer{
     a{
         margin: 0px 20px;
     }
+
+    @include breakpoint(small){
+
+        li{
+            display: block;
+            margin-bottom: 15px;
+
+            span{
+                display: none;
+            }
+        }
+
+    }
 }

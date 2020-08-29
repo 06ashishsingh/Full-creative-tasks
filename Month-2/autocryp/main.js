@@ -1,4 +1,7 @@
 const header = document.getElementById('header');
+const menuIcon = document.querySelector('.menu-icon');
+const closeMenuIcon = document.querySelector('.close-icon');
+const navBlock = document.getElementById('nav-bar');
 
 window.onscroll = function(){
     fixedHeader();
@@ -8,13 +11,21 @@ function fixedHeader(){
 
     if(document.body.scrollTop >= 80 || document.documentElement.scrollTop >= 80)
     {
-        header.style.background = '#313a5a';
-        header.style.boxShadow = '0 2px 4px 0 rgba(0,0,0,0.3)';
+        header.classList.add('header-fixed');
     }
     else
     {
-        header.style.background = 'transparent';
-        header.style.boxShadow = ''; 
+        header.classList.remove('header-fixed');
     }    
 
 }
+
+menuIcon.addEventListener('click',function(){
+    navBlock.classList.add('show-navbar');
+    document.body.style.overflow = 'hidden';
+});
+
+closeMenuIcon.addEventListener('click',function(){
+    navBlock.classList.remove('show-navbar');
+    document.body.style.overflow = '';
+})

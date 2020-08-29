@@ -15,10 +15,24 @@ header{
         font-weight: $bold;
     }
 
+    .menu-icon{
+        display: none;
+        width: 35px;
+        float: right;
+        cursor: pointer;
+    }
+
     nav{    
         line-height: 2.5;
         font-size: 16px;
         text-align: center;
+
+        .close-icon{
+            display: none;
+            width: 28px;
+            float: right;
+            cursor: pointer;
+        }
 
         ul{
             display: inline;
@@ -36,4 +50,65 @@ header{
             }
         }
     }
+
+    @include breakpoint(large){
+        
+        .menu-icon{
+            display: block;
+        }
+
+        nav{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 40px;
+            background-color: $primary-background;
+
+            .close-icon{
+                display: block;
+            }
+
+            li{
+                margin: 40px 0px;
+                font-size: 20px;
+                display: block;
+            }
+
+            .nav-right{
+                float: none;
+                margin-top: 40px;
+                font-size: 20px;
+
+                a{
+                    margin-left: 0px;
+                    display: inline-block;
+                    width: 50%;
+                    margin-bottom: 10px;
+                }
+
+                & a:last-of-type{
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}
+
+.header-fixed{
+    background-color: darken($primary-background, 8%);
+    box-shadow:  2px 4px 0 rgba(0,0,0,0.1);
+}
+
+.show-navbar{
+    display: block;
+    animation: slide 0.5s ease-out;
+}
+
+
+@keyframes slide{
+    0% {right: -700px; opacity: 0;}
+    100% { right: 0; opacity: 1;}
 }

@@ -307,7 +307,7 @@ input:focus{
 }
 
 .locations img{
-    max-width: 100%;
+    width: 100%;
     min-width: 100%;
     display: block;
 }

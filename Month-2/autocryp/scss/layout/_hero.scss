@@ -32,5 +32,37 @@
         bottom: 0;
         right: 120px;
     }
+
+    @include breakpoint(small){
+
+        img{
+            display: none;
+        }
+
+        .container{
+
+            top: 40%;
+            @include translate(0,-40%);
+
+            > div{
+                width: 100%;
+            }
+        }
+    
+    }
+
+
+    @include breakpoint(medium){
+
+        img{
+            max-width: 310px;
+        }
+    }
+
+    @include breakpoint(extra-large){
+        img{
+            right: 5px;
+        }
+    }
     
 }

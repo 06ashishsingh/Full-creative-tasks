@@ -54,8 +54,6 @@ for(let i=0; i<accordianButtons.length;i++)
 }
 
 // modal
-
-
 signUp.addEventListener('click',function(){
     let emailInputValue = document.getElementById('email').value;
     if(emailInputValue)

@@ -87,10 +87,22 @@ header .brand {
   font-size: 26px;
   font-weight: 600;
 }
+header .menu-icon {
+  display: none;
+  width: 35px;
+  float: right;
+  cursor: pointer;
+}
 header nav {
   line-height: 2.5;
   font-size: 16px;
   text-align: center;
+}
+header nav .close-icon {
+  display: none;
+  width: 28px;
+  float: right;
+  cursor: pointer;
 }
 header nav ul {
   display: inline;
@@ -104,7 +116,64 @@ header nav .nav-right {
 header nav .nav-right a {
   margin-left: 38px;
 }
+@media (max-width: 1000px) {
+  header .menu-icon {
+    display: block;
+  }
+  header nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40px;
+    background-color: #313a5a;
+  }
+  header nav .close-icon {
+    display: block;
+  }
+  header nav li {
+    margin: 40px 0px;
+    font-size: 20px;
+    display: block;
+  }
+  header nav .nav-right {
+    float: none;
+    margin-top: 40px;
+    font-size: 20px;
+  }
+  header nav .nav-right a {
+    margin-left: 0px;
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  header nav .nav-right a:last-of-type {
+    padding: 0px;
+  }
+}
 
+.header-fixed {
+  background-color: #232940;
+  box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.show-navbar {
+  display: block;
+  animation: slide 0.5s ease-out;
+}
+
+@keyframes slide {
+  0% {
+    right: -700px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
 .hero {
   position: relative;
   background-color: #313a5a;
@@ -139,6 +208,32 @@ header nav .nav-right a {
   bottom: 0;
   right: 120px;
 }
+@media (max-width: 650px) {
+  .hero img {
+    display: none;
+  }
+  .hero .container {
+    top: 40%;
+    -webkit-transform: translate(0, -40%);
+    -moz-transform: translate(0, -40%);
+    -ms-transform: translate(0, -40%);
+    -o-transform: translate(0, -40%);
+    transform: translate(0, -40%);
+  }
+  .hero .container > div {
+    width: 100%;
+  }
+}
+@media (min-width: 651px) and (max-width: 1000px) {
+  .hero img {
+    max-width: 310px;
+  }
+}
+@media (max-width: 1200px) {
+  .hero img {
+    right: 5px;
+  }
+}
 
 footer {
   text-align: center;
@@ -153,6 +248,15 @@ footer p {
 }
 footer a {
   margin: 0px 20px;
+}
+@media (max-width: 650px) {
+  footer li {
+    display: block;
+    margin-bottom: 15px;
+  }
+  footer li span {
+    display: none;
+  }
 }
 
 .benefit {
@@ -197,6 +301,16 @@ footer a {
 .benefit .container li:last-child {
   margin-right: 0px;
 }
+@media (max-width: 1200px) {
+  .benefit .container {
+    padding: 20px 40px 40px 40px;
+  }
+  .benefit .container li {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+  }
+}
 
 .pricing {
   padding: 150px 0px;
@@ -223,7 +337,7 @@ footer a {
 .pricing .card-wrapper > div {
   height: 560px;
   position: relative;
-  padding: 50px 0px;
+  padding: 60px 0px;
   float: left;
   width: 33.3%;
   color: #5b6c94;
@@ -259,6 +373,32 @@ footer a {
   color: #ffffff;
   background-color: #1fdb84;
   box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+}
+.pricing .card-wrapper .highlight-card {
+  background-color: #ffffff;
+  border-top: 2px solid #0a8aff;
+  box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+}
+@media (max-width: 650px) {
+  .pricing .button-wrapper .monthly-plan, .pricing .button-wrapper .yearly-plan {
+    vertical-align: top;
+    width: 50%;
+    padding: 0;
+    height: 80px;
+  }
+  .pricing .card-wrapper > div {
+    display: inline-block;
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 651px) and (max-width: 1000px) {
+  .pricing .card-wrapper > div {
+    display: inline-block;
+    float: none;
+    width: 60%;
+  }
 }
 
 .testimonial {
@@ -316,6 +456,15 @@ footer a {
   color: #031d5b;
   font-weight: 600;
 }
+@media (max-width: 650px) {
+  .testimonial .left h2 {
+    margin: 0px;
+    font-size: 20px;
+  }
+  .testimonial .left img {
+    max-width: 140px;
+  }
+}
 
 .client {
   padding: 100px 0px;
@@ -327,6 +476,13 @@ footer a {
 .client li {
   vertical-align: middle;
   margin: 0px 47px 20px 0px;
+}
+@media (max-width: 650px) {
+  .client li {
+    display: block;
+    margin-bottom: 30px;
+    margin-right: 0px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
