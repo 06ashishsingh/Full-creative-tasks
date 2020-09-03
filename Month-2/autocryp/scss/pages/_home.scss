@@ -118,6 +118,7 @@
                 margin: 15px 0px;
             }
 
+            
             .free-trial{
                 position: absolute;
                 bottom: 50px;
@@ -127,8 +128,47 @@
                 color: $primary-color;
                 background-color: $secondary-color;
                 box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    visibility: hidden;
+                    left: 50%;
+                    bottom: -12px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: transparent transparent darken($primary-background, 10%) transparent;
+                    z-index: 1;
+                }
+
+                &::after{
+                    content: 'Click to start now';
+                    visibility: hidden;
+                    position: absolute;
+                    left: 0px;
+                    right: 0px;
+                    bottom: -50px;
+                    text-align: center;
+                    color: $secondary-background;
+                    background-color: darken($primary-background, 10%);
+                    border-radius: 5px;
+                    padding: 10px;
+                }
+
+                &:hover{
+                    &::after,&::before{
+                        visibility: visible;
+                    }
+                }
+
             }
+
+            &.free-trial:hover,&.tooltip{
+                visibility: visible;
+            }            
+
         }
+        
 
         .highlight-card{
             background-color: $primary-color;
@@ -202,6 +242,26 @@
         background-color: $primary-background;
         float: right;
 
+        .dots
+        {
+            position: relative;
+            top: 90%;
+            left: 20%;
+
+            .dot{
+                display: inline-block;
+                width: 20px;
+                margin-left: 10px;
+                height: 20px;
+                border: 3px solid white;
+                border-radius: 50%;
+            }
+
+            .active-dot{
+                background-color: $primary-color;
+            }
+        }
+
         .testimonial-wrapper{
             position: absolute;
             top: 50%;
@@ -209,36 +269,48 @@
             transform: translate(0,-50%);
 
             ul{
-                width: 2000px;
+                width: 3000px;
                 overflow: hidden;
-
-                li{
-                    margin-left: 40px;
-
-                    > div{
-                        display: inline-block;
-                        padding: 80px 50px;
-                        width: 420px;
-                        height: 500px;
-                        background-color: $primary-color;
-                        box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
-                        border-radius: 6px;
-                        font-size: 18px;
-
-                        p{
-                            color: $paragraph-color;
-                            line-height: 2;
-                            margin: 23px 0px;
-                        }
-
-                        .author{
-                            color: $heading-color;
-                            font-weight: $bold;
-                        }
-                    }
-                }
+                transition: .7s;
             }
 
+            li{
+                margin-left: 60px;
+                padding: 80px 50px;
+                width: 420px;
+                height: 500px;
+                border-radius: 6px;
+                font-size: 18px;
+                background-color: $primary-color;
+
+            > div{
+
+                p{
+                    color: $paragraph-color;
+                    line-height: 2;
+                    margin: 23px 0px;
+                }
+
+                .author{
+                    color: $heading-color;
+                    font-weight: $bold;
+                }
+            }
+        }
+
+            .highlight{
+                color: white;
+                background-color: $secondary-color;
+
+                .green-logo{
+                    display: none;
+                }
+
+                p,span,.author{
+                    color: inherit;
+                }
+            }
+           
         }
     }
 
