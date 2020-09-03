@@ -287,13 +287,14 @@ footer a {
   margin: 26px 0px;
 }
 .benefit .container li hr {
+  position: absolute;
   width: 60px;
-  margin-bottom: 18px;
   border: 0px;
   height: 2px;
   background-color: #1fdb84;
 }
 .benefit .container li p {
+  margin-top: 50px;
   font-size: 16px;
   line-height: 2;
   color: #5b6c94;

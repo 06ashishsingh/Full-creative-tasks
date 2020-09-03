@@ -38,13 +38,6 @@ const dotList = document.querySelectorAll('.dot');
 let slideIndex = 0;
 const slideWidth = slidesList[slideIndex].clientWidth;
 
-const firstClone = slidesList[0].cloneNode(true);
-const lastClone = slidesList[slidesList.length-1].cloneNode(true);
-
-testimonialContainer.append(firstClone);
-testimonialContainer.prepend(lastClone);
-testimonialContainer.style.transform = `translateX(${-slideWidth * slideIndex}px)`;
-
 showSlide();
 
 function showSlide(){
@@ -66,18 +59,10 @@ function showSlide(){
         slidesList[i].className = slidesList[i].className.replace(" highlight","");
     }
 
-    if(slideIndex==1)
-    {
-        testimonialContainer.style.transition = '0s';
-    }
-    else{
-
-        testimonialContainer.style.transition = '.7s';
-    }
-
-    testimonialContainer.style.transform = `translateX(${-slideWidth * (slideIndex)}px)`;
+    testimonialContainer.style.transform = `translateX(${-slideWidth * (slideIndex-1)}px)`;
     slidesList[slideIndex-1].className += " highlight";
     dotList[slideIndex-1].className += " active-dot";
-    
+
     setTimeout(showSlide, 3000);
 }
+
