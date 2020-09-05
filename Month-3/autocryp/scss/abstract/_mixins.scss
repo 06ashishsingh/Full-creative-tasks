@@ -1,0 +1,50 @@
+@mixin clearfix {
+    &::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+@mixin translate($x,$y) {
+    @include transform(translate($x,$y));
+}
+
+
+@mixin breakpoint($size) {
+    
+    @if $size == small {
+
+        @media (max-width:650px) {
+            @content;
+        }
+        
+    }@else if $size == medium {
+
+        @media (min-width: 651px) and (max-width:1000px){
+            @content;
+        }
+
+    }@else if $size == large{
+
+        @media (max-width:1000px) {
+            @content;
+        }
+
+    }@else if $size == extra-large{
+
+        @media (max-width:1200px) {
+            @content;
+        }
+    }    
+
+}
