@@ -1,0 +1,404 @@
+.benefit{
+    position: relative;
+    margin-top: -100px;
+
+    .container{
+        padding: 60px;
+        border-radius: 10px;
+        background-color: $primary-color;
+        box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+        
+        ul{
+            font-size: 0;
+        }
+
+        li{
+            vertical-align: top;
+            margin-right: 40px;
+            width: 30%;
+
+            figure {
+                display: inline-block;
+                padding: 20px 16px;
+                background-color: lighten(#1fdb84,40%);
+                border-radius: 6px;
+            }
+
+            h3{
+                margin: 26px 0px;
+            }
+
+            hr{
+                position: absolute;
+                width: 60px;
+                border: 0px;
+                height: 2px;
+                background-color: $secondary-color;
+            }
+
+            p{
+                margin-top: 50px;
+                font-size: 16px;
+                line-height: 2;
+                color: #5b6c94;
+            }
+        }
+
+        & li:last-child{
+            margin-right: 0px;
+        }
+    }
+
+    @include breakpoint(extra-large){
+        
+        .container{
+            padding: 20px 40px 40px 40px;
+
+            li{
+                display: block;
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+
+.pricing{
+    padding: 150px 0px;
+    text-align: center;
+
+    .button-wrapper{
+        color: $secondary-color;
+        margin: 60px 0px;
+        font-size: 0;
+
+        .monthly-plan{
+            background-color: $primary-color;
+            border-radius: 5px 0px 0px 5px;
+        }
+        
+        .yearly-plan{
+            background-color: lighten($secondary-color,45%);
+            border-radius: 0px 5px 5px 0px;
+        }
+    }
+
+    .card-wrapper{
+
+        @include clearfix;
+
+        & > div{
+            height: 560px;
+            position: relative;
+            padding: 60px 0px;
+            float: left;
+            width: 33.3%;
+            color: $paragraph-color;
+
+            h4{
+                margin-bottom: 20px;
+            }
+
+            .price{
+                font-size: 72px;
+                color: $secondary-color;
+            }
+
+            .per-month{
+                margin-bottom: 50px;
+            }
+
+            ul{
+                margin-top: 60px;
+            }
+
+            li{
+                font-size: 16px;
+                display: block;
+                margin: 15px 0px;
+            }
+
+            
+            .free-trial{
+                position: absolute;
+                bottom: 50px;
+                left: 50%;
+                @include translate(-50%,0);
+                letter-spacing: 1px;
+                color: $primary-color;
+                background-color: $secondary-color;
+                box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    visibility: hidden;
+                    left: 50%;
+                    bottom: -12px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: transparent transparent darken($primary-background, 10%) transparent;
+                    z-index: 1;
+                }
+
+                &::after{
+                    content: 'Click to start now';
+                    visibility: hidden;
+                    position: absolute;
+                    left: 0px;
+                    right: 0px;
+                    bottom: -50px;
+                    text-align: center;
+                    color: $secondary-background;
+                    background-color: darken($primary-background, 10%);
+                    border-radius: 5px;
+                    padding: 10px;
+                }
+
+                &:hover{
+                    &::after,&::before{
+                        visibility: visible;
+                    }
+                }
+
+            }
+
+            &.free-trial:hover,&.tooltip{
+                visibility: visible;
+            }            
+
+        }
+        
+
+        .highlight-card{
+            background-color: $primary-color;
+            border-top: 2px solid #0a8aff;
+            box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+        }
+    }
+
+    @include breakpoint(small){
+
+        .button-wrapper{    
+
+            .monthly-plan,.yearly-plan{
+                vertical-align: top;
+                width: 50%;
+                padding: 0;
+                height: 80px;
+            }
+
+
+        }
+
+        .card-wrapper{
+
+            > div{
+                display: inline-block;
+                float: none;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    @include breakpoint(medium) {
+        
+        .card-wrapper{
+
+            > div{
+                display: inline-block;
+                float: none;
+                width: 60%;
+            }
+        }
+    }
+}
+
+
+.testimonial{
+    overflow: hidden;
+    position: relative;
+
+    .left{
+        margin-left: 10%;
+        float: left;
+        width: 40%;
+        position: relative;
+
+        h2{
+            margin: 40px 45px 0px 25px;
+            position: absolute;
+        }
+
+        img{
+            max-width: 370px;
+        }
+    }
+    
+    .right{
+        width: 50%;
+        height: 960px;
+        background-color: $primary-background;
+        float: right;
+
+        .dots
+        {
+            position: relative;
+            top: 90%;
+            left: 20%;
+
+            .dot{
+                display: inline-block;
+                width: 20px;
+                margin-left: 10px;
+                height: 20px;
+                border: 3px solid white;
+                border-radius: 50%;
+            }
+
+            .active-dot{
+                background-color: $primary-color;
+            }
+        }
+
+        .testimonial-wrapper{
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: translate(0,-50%);
+
+            ul{
+                width: 3000px;
+                overflow: hidden;
+                transition: .7s;
+            }
+
+            li{
+                margin-left: 60px;
+                padding: 80px 50px;
+                width: 420px;
+                height: 500px;
+                border-radius: 6px;
+                font-size: 18px;
+                background-color: $primary-color;
+
+            > div{
+
+                p{
+                    color: $paragraph-color;
+                    line-height: 2;
+                    margin: 23px 0px;
+                }
+
+                .author{
+                    color: $heading-color;
+                    font-weight: $bold;
+                }
+            }
+        }
+
+            .highlight{
+                color: white;
+                background-color: $secondary-color;
+
+                .green-logo{
+                    display: none;
+                }
+
+                p,span,.author{
+                    color: inherit;
+                }
+            }
+           
+        }
+    }
+
+    @include breakpoint(small){
+
+        .left{
+
+            h2{
+                margin: 0px;
+                font-size: 20px;
+            }
+
+            img{
+                max-width: 140px;
+            }
+        }
+    }
+}
+
+.learnMore{
+
+    text-align: center;
+    padding-top: 150px;
+
+    .container{
+        @include clearfix;
+
+        > div{
+            margin-top: 60px;
+            float: left;
+            width: 33.3%;            
+
+            picture{
+
+                img{
+                    max-width: 90%;
+                    width: 90%;
+                    height: auto;
+                }
+            }
+
+            p{
+                color: $paragraph-color;
+                margin-top: 20px;
+            }
+
+            a{
+                display: inline-block;
+                color: $secondary-color;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    @include breakpoint(large){
+
+        .container {
+
+            > div {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+
+.client{
+    padding: 100px 0px;
+    text-align: center;
+
+    h5{
+        margin-bottom: 50px;
+    }
+
+    li{
+        vertical-align: middle;
+        margin: 0px 47px 20px 0px;
+    }
+
+    @include breakpoint(small){
+
+        li{
+            display: block;
+            margin-bottom: 30px;
+            margin-right: 0px;
+        }
+    }
+}
