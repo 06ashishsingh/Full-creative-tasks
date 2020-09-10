@@ -11,6 +11,7 @@ const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const svgmin = require('gulp-svgmin');
+const spriteSmith = require('gulp.spritesmith');
 const svgSprite = require("gulp-svg-sprite");
 
 
@@ -34,38 +35,51 @@ const paths  = {
     },
 
     images : {
-        src : 'assets/**/*',
-        dest : 'dist/assets/'
+        src : 'app/images/**/*',
+        dest : 'dist/images/'
     },
 
     imagesWebp : {
-        src : 'assets/**/*.jpg',
-        dest : 'dist/assets/',
+        src : 'app/images/**/*.png',
+        dest : 'dist/images/',
     },
 
     sprites : {
-        src : 'assets/**/*.svg',
-        dest: 'dist/assets/'
+        src : 'app/images/**/*.png',
+        dest: 'dist/images'
     }
 }
 
 const config = {
 
     mode: {
-        css: { 
-          render: {
-            css: true
-          }
-        }
-    }
+        symbol: {
+          dest: '.',
+          example: false,
+          sprite: 'main.svg'
+        },
+    },
 }
 
+// config = {
+//     mode: {
+//       css: { // Activate the «css» mode
+//         render: {
+//           css: true // Activate CSS output (with default options)
+//         }
+//       }
+//     }
+// };
 
-function copyHtml(){
-    return gulp.src(paths.html.src)
-        .pipe(gulp.dest(paths.html.dest))
+function sprites(){
+
+    return gulp.src(paths.sprites.src)
+        .pipe(spriteSmith({
+            imgName: 'sprite.png',
+            cssName: 'sprite.css'
+        }))
+        .pipe(gulp.dest(paths.sprites.dest))
 }
-
 
 function styles(){
 
@@ -118,10 +132,10 @@ function watch(){
 exports.minify = minify;
 exports.webpImage = webpImage;
 exports.imageSprites = imageSprites;
+exports.sprites = sprites;
 
 // default task
 var build = gulp.series(
-    copyHtml,
     gulp.parallel(styles,scripts),
     watch,
 )
