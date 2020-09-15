@@ -1,0 +1,96 @@
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 21px;
+    font-size: 16px;
+    text-align: center;
+
+    .header__logo{
+        float: left;
+        font-size: 0;
+
+        div{
+            display: inline-block;
+            border-radius: 0% 0% 50% 50%;
+            width: 15px;
+            height: 20px;
+            background-color: $color-black-900;
+        }
+        
+        a{
+            font-size: 16px;
+            line-height: 1.5;
+            vertical-align: top;
+            color: $color-black-900;
+            font-weight: 600;
+        }
+    }
+
+    .header__brand{
+        margin-left: 200px;
+        color: $color-grey-400;
+
+        span{
+            margin-left: 5px;
+        }
+    }
+}
+
+form{
+    
+    float: right;
+
+    .search-list{
+        display: none;
+        margin-top: 5px;
+        margin-left: 30px;
+        padding: 8px 8px 0px 8px;
+        position: absolute;
+        width: 100px;
+        text-align: left;
+        background-color: $color-white-900;
+        border-radius: 2px;
+        border: 1px solid $color-grey-100;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+
+        li{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+    }
+
+    .search-list-show{
+        display: block;
+    }
+
+}
+
+.header__search{
+    position: relative;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.07);
+    padding: 2px 20px 2px 9px;
+    color: $color-grey-300;
+    border-radius: 15px;
+    border: 1px solid $color-grey-300;
+
+    .fa{
+        margin-right: 2px;
+    }
+
+    .fa-angle-down{
+        font-size: 12px;
+        position: absolute;
+        bottom: 2px;
+    }
+
+    input[type=text]{
+        padding-left: 12px;
+        font-size: 14px;
+        width: 290px;
+    }
+
+    input::-webkit-calendar-picker-indicator {
+        display: none;
+    }
+}

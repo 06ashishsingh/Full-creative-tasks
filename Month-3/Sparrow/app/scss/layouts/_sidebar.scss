@@ -1,0 +1,120 @@
+.sidebar{
+    float: left;
+    position: fixed;
+    height: 100vh;
+    width: 15%;
+
+    .sidebar__button{
+        display: block;
+        margin: 21px 0px 0px 21px;
+        border-radius: 2px;
+        padding: 10px 52px;
+        font-size: 12px;
+        color: $color-white-900;
+        text-transform: uppercase;
+        background-color: $color-blue-400;
+    }
+}
+
+.mail-options{
+    
+    padding: 0px 21px;
+    margin-top: 28px;
+
+    .mail-options__item{
+
+        margin-top: 12px;
+
+        i{
+            font-size: 18px;
+        }
+        
+        button{
+            color: inherit;
+            background-color: inherit;
+            text-transform: capitalize;
+            font-size: 14px;
+            margin-left: 12px;
+        }  
+           
+    }
+
+    .mail-options-active{
+        color: $color-black-200;
+    }
+    
+}
+
+.chat-options{
+
+    margin-top: 37px;
+
+    .chat-options__item{
+        padding: 8px 10px 8px 25px;
+
+        button{
+            background-color: transparent;
+            margin-left: 20px;
+        }
+
+        .fa-angle-down{
+            font-size: 12px;
+            float: right;
+            margin-top: 5px;
+            padding: 0px 2px;
+            color: $color-white-900;
+            background-color: $color-black-300;
+        }
+    }
+
+    .client-sublist{
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s ease-out;  
+        font-size: 13px;
+        color: $color-black-100;
+
+        li{
+            font-weight: 600;
+            padding: 10px 21px 10px 26px;
+
+            .badge{
+                width: 1px;
+                height: 1px;
+                border-radius: 50%;
+                border-width: 2px;
+                margin-right: 23px;
+            }
+        }
+    }
+
+    .chat-options-active{
+        background-color: $color-white-200;
+        color: $color-black-200;
+    }
+}
+
+.button-group{
+    
+    position: absolute;
+    bottom: 65px;
+    width: 100%;
+    color: $color-black-100;
+    font-size: 0;
+    background-color: $color-white-500;
+
+    button{
+        font-size: 18px;
+        padding: 20px 0px;
+        width: 50%;
+    }
+
+    .setting{
+        border-right: 1px solid $color-white-200;
+    }
+
+    .button-active{
+        background-color: $color-white-500;
+        color: $color-black-200;
+    }
+}

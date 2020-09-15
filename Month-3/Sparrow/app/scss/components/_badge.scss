@@ -1,0 +1,31 @@
+.personal-badge,.clients-badge,.family-badge,.friends-badge,.archives-badge{
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 2px;
+    height: 10px;
+    width: 10px;
+    border-width: 3px;
+    border-style: solid;
+
+    span{
+        display:inline-block;
+        margin-left: 10px;
+    }
+}
+
+.personal-badge{
+    border-color: $color-purple;
+}
+
+.clients-badge{
+    border-color: $color-orange;
+}
+
+.family-badge{
+    border-color: $color-yellow;
+}
+
+.friends-badge{
+    border-color: $color-blue-100;
+}
+
