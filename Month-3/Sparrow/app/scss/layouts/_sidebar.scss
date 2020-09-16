@@ -1,12 +1,14 @@
 .sidebar{
     float: left;
-    position: fixed;
-    height: 100vh;
+    position: relative;
     width: 15%;
+    // overflow-y: scroll;
+    height: 100%;
 
-    .sidebar__button{
-        display: block;
-        margin: 21px 0px 0px 21px;
+
+    .compose{
+        display: inline-block;
+        margin: 21px 0px 0px 15px;
         border-radius: 2px;
         padding: 10px 52px;
         font-size: 12px;
@@ -29,7 +31,7 @@
             font-size: 18px;
         }
         
-        button{
+        a{
             color: inherit;
             background-color: inherit;
             text-transform: capitalize;
@@ -46,19 +48,21 @@
 }
 
 .chat-options{
-
     margin-top: 37px;
+    overflow: auto;
 
     .chat-options__item{
         padding: 8px 10px 8px 25px;
 
-        button{
+        a{
+            font-size: 14px;
             background-color: transparent;
-            margin-left: 20px;
+            margin-left: 15px;
         }
 
         .fa-angle-down{
             font-size: 12px;
+            cursor: pointer;
             float: right;
             margin-top: 5px;
             padding: 0px 2px;
@@ -70,7 +74,7 @@
     .client-sublist{
         max-height: 0;
         overflow: hidden;
-        transition: 0.5s ease-out;  
+        transition: 0.3s ease-out;  
         font-size: 13px;
         color: $color-black-100;
 
@@ -86,6 +90,10 @@
                 margin-right: 23px;
             }
         }
+
+        li:hover{
+            color: $color-black-200;
+        }
     }
 
     .chat-options-active{
@@ -96,8 +104,11 @@
 
 .button-group{
     
+    // position: relative;
+    // top: 50%;
+    // transform: translateY(-50%);
     position: absolute;
-    bottom: 65px;
+    bottom: 0;
     width: 100%;
     color: $color-black-100;
     font-size: 0;

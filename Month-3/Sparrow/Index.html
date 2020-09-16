@@ -10,46 +10,44 @@
 </head>
 <body>
     <header>
-        <div class="header__logo">
-            <div></div>
-            <a href="javascript:;">mail</a>
-        </div>
-        <a class="header__brand" href="javascript:;">Sparrow<span>(2)</span></a>
+        <a class="logo" href="javascript:;"><span></span>mail</a>
+        <a class="brand" href="javascript:;">Sparrow<span>(2)</span></a>
         <form autocomplete="off">
-            <div class="header__search">
-                <i class="fa fa-search"></i><i class="fa fa-angle-down" aria-hidden="true"></i>
-                <input id="search-input" type="text">
+            <div class="search">
+                <i class="fa fa-search"></i>
+                <i id="searchDropdown" class="fa fa-angle-down"></i>
+                <input class="search__input" type="text">
+                <ul class="search__list">
+                    <li>Personal</li>
+                    <li>Clients</li>
+                    <li>Family</li>
+                    <li>Friends</li>
+                    <li>Archives</li>
+                </ul>
             </div>
-            <ul class="search-list">
-                <li>Personal</li>
-                <li>Clients</li>
-                <li>Family</li>
-                <li>Friends</li>
-                <li>Archives</li>
-            </ul>
         </form>
     </header>
     <main>
         <section class="sidebar">
-            <button class="sidebar__button">Compose</button>
+            <button class="compose">Compose</button>
             <ul class="mail-options">
-                <li class="mail-options__item"><i class="fa fa-inbox" aria-hidden="true"></i> <button>inbox <span>(2)</span></button></li>
-                <li class="mail-options__item"><i class="fa fa-upload" aria-hidden="true"></i> <button> sent mail</button><span></span></li>
-                <li class="mail-options__item"><i class="fa fa-star" aria-hidden="true"></i> <button>starred</button><span></span></li>
-                <li class="mail-options__item"><i class="fa fa-file-text" aria-hidden="true"></i> <button>drafts</button><span></span></li>
-                <li class="mail-options__item"><i class="fa fa-trash" aria-hidden="true"></i> <button>trash</button><span></span></li>
+                <li class="mail-options__item"><i class="fa fa-inbox" aria-hidden="true"></i> <a href="javascript:;">inbox <span>(2)</span></a></li>
+                <li class="mail-options__item"><i class="fa fa-upload" aria-hidden="true"></i> <a href="javascript:;"> sent mail <span></span></a></li>
+                <li class="mail-options__item"><i class="fa fa-star" aria-hidden="true"></i> <a href="javascript:;">starred <span></span></a></li>
+                <li class="mail-options__item"><i class="fa fa-file-text" aria-hidden="true"></i> <a href="javascript:;">drafts <span></span></a></li>
+                <li class="mail-options__item"><i class="fa fa-trash" aria-hidden="true"></i> <a href="javascript:;">trash <span></span></a></li>
             </ul>
             <ul class="chat-options">
-                <li class="chat-options__item"><span class="personal-badge"></span><button>personal <span>(2)</span></button></li>
+                <li class="chat-options__item"><span class="personal-badge"></span><a href="javascript:;">Personal <span>(2)</span></a></li>
                 <li class="chat-options__item"><span class="clients-badge">
-                </span><button>clients <span></span></button><i id="chat-dropdown" class="fa fa-angle-down" aria-hidden="true"></i></li>
+                </span><a href="javascript:;">Clients <span></span></a><i id="chat-dropdown" class="fa fa-angle-down" aria-hidden="true"></i></li>
                 <ul class="client-sublist">
-                    <li><span class="badge clients-badge"></span>Collabs</li>
-                    <li><span class="badge clients-badge"></span>Public Collab</li>
+                    <li><span class="badge clients-badge"></span><a href="javascript:;">Collabs</a></li>
+                    <li><span class="badge clients-badge"></span><a href="javascript:;">Public Collab</a></li>
                 </ul>
-                <li class="chat-options__item"><span class="family-badge"></span><button>Family <span>(2)</span></button></li>
-                <li class="chat-options__item"><span class="friends-badge"></span><button>Friends <span></span></button></li>
-                <li class="chat-options__item"><span class="archives-badge"></span><button>Archives <span></span></button></li>
+                <li class="chat-options__item"><span class="family-badge"></span><a href="javascript:;">Family <span>(2)</span></a></li>
+                <li class="chat-options__item"><span class="friends-badge"></span><a href="javascript:;">Friends <span></span></a></li>
+                <li class="chat-options__item"><span class="archives-badge"></span><a href="javascript:;">Archives <span></span></a></li>
             </ul>
             <div class="button-group">
                 <button class="setting"><i class="fa fa-cog" aria-hidden="true"></i></button>
@@ -58,7 +56,7 @@
         </section>
         <section class="mails">
             <ul class="mail-list">
-                <li class="mail-list__item">
+                <li class="mail-list__item show-icons">
                     <div class="message">
                         <div>
                             <span class="message__content">My portfolio is up</span>
@@ -67,14 +65,14 @@
                         <div>
                             <span class="message__sender">Jimmy Raherlarisoa</span>
                             <div class="message__icons">
-                                <i class="fa fa-paperclip hide-icon" aria-hidden="true"></i>
+                                <i class="fa fa-paperclip" aria-hidden="true"></i>
                                 <i class="fa fa-reply" aria-hidden="true"></i>
                                 <span class="badge personal-badge"></span>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="mail-list__item">
+                <li class="mail-list__item show-icons">
                     <div class="message">
                         <div>
                             <span class="message__content">Feedbacks UI Concept</span>
@@ -90,7 +88,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="mail-list__item">
+                <li class="mail-list__item show-icons">
                     <div class="message">
                         <div>
                             <span class="message__content">Don't forget my birthday</span>
@@ -99,14 +97,14 @@
                         <div>
                             <span class="message__sender">Luca Tantardini</span>
                             <div class="message__icons">
-                                <i class="fa fa-paperclip hide-icon" aria-hidden="true"></i>
+                                <i class="fa fa-paperclip" aria-hidden="true"></i>
                                 <i class="fa fa-reply" aria-hidden="true"></i>
                                 <span class="badge clients-badge"></span>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="mail-list__item">
+                <li class="mail-list__item show-icons">
                     <div class="message">
                         <div>
                             <span class="message__content">Your Dropbox Account</span>
@@ -115,14 +113,14 @@
                         <div>
                             <span class="message__sender">Dropbox Team</span>
                             <div class="message__icons">
-                                <i class="fa fa-paperclip hide-icon" aria-hidden="true"></i>
+                                <i class="fa fa-paperclip" aria-hidden="true"></i>
                                 <i class="fa fa-reply" aria-hidden="true"></i>
-                                <span class="badge clients-badge hide-icon"></span>
+                                <span class="badge clients-badge"></span>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="mail-list__item">
+                <li class="mail-list__item show-icons">
                     <div class="message">
                         <div>
                             <span class="message__content">Order Confirmation</span>
@@ -132,13 +130,13 @@
                             <span class="message__sender">A Book Apart</span>
                             <div class="message__icons">
                                 <i class="fa fa-paperclip" aria-hidden="true"></i>
-                                <i class="fa fa-reply hide-icon" aria-hidden="true"></i>
-                                <span class="badge clients-badge hide-icon"></span>
+                                <i class="fa fa-reply" aria-hidden="true"></i>
+                                <span class="badge clients-badge"></span>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="mail-list__item">
+                <li class="mail-list__item show-icons">
                     <div class="message">
                         <div>
                             <span class="message__content">Check this crazy video</span>
@@ -148,13 +146,13 @@
                             <span class="message__sender">Antoine Farjon</span>
                             <div class="message__icons">
                                 <i class="fa fa-paperclip" aria-hidden="true"></i>
-                                <i class="fa fa-reply hide-icon" aria-hidden="true"></i>
+                                <i class="fa fa-reply" aria-hidden="true"></i>
                                 <span class="badge personal-badge"></span>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="mail-list__item">
+                <li class="mail-list__item show-icons">
                     <div class="message">
                         <div>
                             <span class="message__content">Hello Vincent</span>
@@ -163,14 +161,14 @@
                         <div>
                             <span class="message__sender">Maxime Messer</span>
                             <div class="message__icons">
-                                <i class="fa fa-paperclip hide-icon" aria-hidden="true"></i>
-                                <i class="fa fa-reply hide-icon hide-icon" aria-hidden="true"></i>
-                                <span class="badge archives-badge hide-icon"></span>
+                                <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                <i class="fa fa-reply" aria-hidden="true"></i>
+                                <span class="badge archives-badge"></span>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="mail-list__item">
+                <li class="mail-list__item show-icons">
                     <div class="message">
                         <div>
                             <span class="message__content">Comment on your article</span>
@@ -180,13 +178,13 @@
                             <span class="message__sender">Designmodo</span>
                             <div class="message__icons">
                                 <i class="fa fa-paperclip" aria-hidden="true"></i>
-                                <i class="fa fa-reply hide-icon" aria-hidden="true"></i>
+                                <i class="fa fa-reply" aria-hidden="true"></i>
                                 <span class="badge friends-badge"></span>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="mail-list__item">
+                <li class="mail-list__item show-icons">
                     <div class="message">
                         <div>
                             <span class="message__content">Amazing weather today</span>
@@ -207,18 +205,18 @@
         <section class="chat">
             <div class="chat__container">
                 <div class="chat__details">
-                    <div class="chat__icon">
+                    <div class="icon">
                         <span class="personal-badge"></span>
-                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="profile picture">
                     </div>
                     <div class="description">
-                        <span class="subject">Feedbakcs UI Concept </span>
+                        <span class="subject">Feedbakcs UI ConceptFeedbakcs</span>
                         <div>
                             <span>From:</span>
                             <span class="sender">Anne Thai <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
                             <div class="sender__details">
                                 <ul>
-                                    <li>from: <span class="">Anne Thai</span></li>
+                                    <li>from: <span>Anne Thai</span></li>
                                     <li>reply-to: <span><a href="mailto: javascript:;">AnneThai@sparrow.com</a></span></li>
                                     <li>to: <span><a href="mailto: javascript:;">Vincent@sparrow.com</a></span></li>
                                     <li>date: <span>14/09/2020</span></span></li>
@@ -228,10 +226,10 @@
                         </div>
                     </div>
                     <div class="chat__icons">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-file-text" aria-hidden="true"></i>
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                        <i class="fa fa-reply" aria-hidden="true"></i>
+                        <i class="chat__icons_item fa fa-star" aria-hidden="true"></i>
+                        <i class="chat__icons_item fa fa-file-text" aria-hidden="true"></i>
+                        <i class="chat__icons_item fa fa-trash" aria-hidden="true"></i>
+                        <i class="chat__icons_item fa fa-reply" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="chat__content">

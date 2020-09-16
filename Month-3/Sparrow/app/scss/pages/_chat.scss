@@ -1,10 +1,7 @@
 .chat{
-    position: fixed;
-    top: 80px;
+    position: relative;
     float: left;
-    right: 0;
     width: 55%;
-    height: 100vh;
 }
 
 .chat__container{
@@ -16,21 +13,20 @@
     padding-bottom: 40px;
     border-bottom: 2px solid $color-grey-100;
 
-    .chat__icon{
-        
-        position: relative;
+    .icon{
         width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        overflow: hidden;
 
         .personal-badge{
             position: absolute;
             top: 2px;
-            right: 2px;
-            z-index: 1;
+            left: 42px;
         }
 
         img{
             max-width: 100%;
-            border-radius: 50%;
         }
     
     }
@@ -48,8 +44,7 @@
         font-size: 18px;
         display: inline-block;
         width: 300px;
-        white-space: nowrap;
-        overflow: hidden;
+        line-height: 1.2;
         text-overflow: ellipsis;
         color: $color-black-200;
     }
@@ -105,27 +100,24 @@
 
 
 .chat__icons{
+
     cursor: pointer;
     position: absolute;
     right: 0px;
     top: 10px;
+    border: 0.5px solid $color-white-200;
+    border-radius: 25px;
+    overflow: hidden;
     font-size: 0;
 
-    .fa{
+    .chat__icons_item{
         padding: 6px 12px;
         font-size: 18px;
-        border-right: 1px solid $color-white-200;
-        border-top: 1px solid $color-white-200;
-        border-bottom: 1px solid $color-white-200;
         color: $color-grey-300;
     }
 
-    .fa-star{
-        border-radius: 25px 0px 0px 25px;
-    }
-
-    .fa-reply{
-        border-radius: 0px 25px 25px 0px;
+    .fa-star,.fa-file-text,.fa-trash{
+        border-right: 1px solid $color-white-200;
     }
 
     .chat-icons-active{

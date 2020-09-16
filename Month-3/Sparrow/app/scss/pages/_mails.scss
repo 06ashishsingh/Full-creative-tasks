@@ -1,11 +1,9 @@
 .mails{
     position: relative;
-    top: 10px;
+    float: left;
     width: 30%;
-    height: 100vh;
+    height: 100%;
     overflow: auto;
-    left: 15.5%;
-    padding-bottom: 75px;
 }
 
 
@@ -22,12 +20,13 @@
     padding: 22px 19px;
     
     div:first-child{
+        line-height: 1.5;
         margin-bottom: 9px;
     }
 
     .message__content,.message__sender{
         display: inline-block;
-        width: 200px;
+        width: 70%;
         line-height: 1.5;
         overflow: hidden;
         white-space: nowrap;
@@ -42,6 +41,7 @@
 
     .message__time{
         float: right;
+        font-size: 14px;
     }
 
     .message__sender{
@@ -49,6 +49,7 @@
     }
 
     .message__icons{
+        display: none;
         float: right;
         font-size: 13px;
 
@@ -62,6 +63,15 @@
             margin-left: 3px;
         }
     }
+
+}
+
+.show-icons{
+
+    .message .message__icons{
+        display: inline;
+    }
+    
 }
 
 .mail-list-active{
@@ -70,12 +80,5 @@
 }
 
 
-.show-icon{
-    display: inline;
-}
-
-.hide-icon{
-    display: none;
-}
 
 

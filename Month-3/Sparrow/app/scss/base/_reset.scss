@@ -18,12 +18,13 @@ body{
 }
 
 main{
-    margin-top: 65px;
+    margin-top: 66px;
+    height: calc(100vh - 66px);
     @include clearfix;
 }
 
 ::-webkit-scrollbar{
-    width: 2px;
+    width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -35,7 +36,7 @@ main{
     border-radius: 5px;
 }
 
-button,a,li,input{
+button,a,input{
     cursor: pointer;
 }
 
