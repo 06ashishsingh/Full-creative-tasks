@@ -1,0 +1,38 @@
+.report{
+    @include padding(20px);
+}
+
+.chart{
+    width: 75%;
+    @include margin(0 auto);
+}
+
+
+.report__data{
+    @include size(100%,25%);
+    @include clearfix;
+
+    .mails-sent,.mails-recieved,.drafts{
+        width: 30%;
+        float: left;
+        text-align: center;
+        background-color: $color-white-900;
+        @include margin(0 0 0 30px);
+        @include padding(15px);
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    i{
+        font-size: 35px;
+    }
+
+    p,span{
+        font-size: 20px;
+    }
+
+    p,span,i{
+        @include margin(0 0 10px 0);
+        color: $color-black-200;
+    }
+}

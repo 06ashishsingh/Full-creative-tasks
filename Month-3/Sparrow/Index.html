@@ -30,12 +30,14 @@
     <main>
         <section class="sidebar">
             <button class="compose">Compose</button>
+            <div>
             <ul class="mail-options">
                 <li class="mail-options__item"><i class="fa fa-inbox" aria-hidden="true"></i> <a href="javascript:;">inbox <span>(2)</span></a></li>
                 <li class="mail-options__item"><i class="fa fa-upload" aria-hidden="true"></i> <a href="javascript:;"> sent mail <span></span></a></li>
                 <li class="mail-options__item"><i class="fa fa-star" aria-hidden="true"></i> <a href="javascript:;">starred <span></span></a></li>
                 <li class="mail-options__item"><i class="fa fa-file-text" aria-hidden="true"></i> <a href="javascript:;">drafts <span></span></a></li>
                 <li class="mail-options__item"><i class="fa fa-trash" aria-hidden="true"></i> <a href="javascript:;">trash <span></span></a></li>
+                <li class="mail-options__item"><i class="fa fa-line-chart" aria-hidden="true"></i><a href="javascript:;">reports <span></span></a></li>
             </ul>
             <ul class="chat-options">
                 <li class="chat-options__item"><span class="personal-badge"></span><a href="javascript:;">Personal <span>(2)</span></a></li>
@@ -49,231 +51,269 @@
                 <li class="chat-options__item"><span class="friends-badge"></span><a href="javascript:;">Friends <span></span></a></li>
                 <li class="chat-options__item"><span class="archives-badge"></span><a href="javascript:;">Archives <span></span></a></li>
             </ul>
+            </div>
             <div class="button-group">
                 <button class="setting"><i class="fa fa-cog" aria-hidden="true"></i></button>
                 <button class="user"><i class="fa fa-user" aria-hidden="true"></i></button>
             </div>
         </section>
-        <section class="mails">
-            <ul class="mail-list">
-                <li class="mail-list__item show-icons">
-                    <div class="message">
-                        <div>
-                            <span class="message__content">My portfolio is up</span>
-                            <span class="message__time">18:27</span>
-                        </div>
-                        <div>
-                            <span class="message__sender">Jimmy Raherlarisoa</span>
-                            <div class="message__icons">
-                                <i class="fa fa-paperclip" aria-hidden="true"></i>
-                                <i class="fa fa-reply" aria-hidden="true"></i>
-                                <span class="badge personal-badge"></span>
+        <section class="tab inbox">
+            <section class="mails">
+                <ul class="mail-list">
+                    <li class="mail-list__item show-icons">
+                        <div class="message">
+                            <div>
+                                <span class="message__content">My portfolio is up</span>
+                                <span class="message__time">18:27</span>
+                            </div>
+                            <div>
+                                <span class="message__sender">Jimmy Raherlarisoa</span>
+                                <div class="message__icons">
+                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                    <i class="fa fa-reply" aria-hidden="true"></i>
+                                    <span class="badge personal-badge"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="mail-list__item show-icons">
-                    <div class="message">
-                        <div>
-                            <span class="message__content">Feedbacks UI Concept</span>
-                            <span class="message__time">15:22</span>
-                        </div>
-                        <div>
-                            <span class="message__sender">Anne Thai</span>
-                            <div class="message__icons">
-                                <i class="fa fa-paperclip" aria-hidden="true"></i>
-                                <i class="fa fa-reply" aria-hidden="true"></i>
-                                <span class="badge friends-badge"></span>
+                    </li>
+                    <li class="mail-list__item show-icons">
+                        <div class="message">
+                            <div>
+                                <span class="message__content">Feedbacks UI Concept</span>
+                                <span class="message__time">15:22</span>
+                            </div>
+                            <div>
+                                <span class="message__sender">Anne Thai</span>
+                                <div class="message__icons">
+                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                    <i class="fa fa-reply" aria-hidden="true"></i>
+                                    <span class="badge friends-badge"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="mail-list__item show-icons">
-                    <div class="message">
-                        <div>
-                            <span class="message__content">Don't forget my birthday</span>
-                            <span class="message__time">12:50</span>
-                        </div>
-                        <div>
-                            <span class="message__sender">Luca Tantardini</span>
-                            <div class="message__icons">
-                                <i class="fa fa-paperclip" aria-hidden="true"></i>
-                                <i class="fa fa-reply" aria-hidden="true"></i>
-                                <span class="badge clients-badge"></span>
+                    </li>
+                    <li class="mail-list__item show-icons">
+                        <div class="message">
+                            <div>
+                                <span class="message__content">Don't forget my birthday</span>
+                                <span class="message__time">12:50</span>
+                            </div>
+                            <div>
+                                <span class="message__sender">Luca Tantardini</span>
+                                <div class="message__icons">
+                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                    <i class="fa fa-reply" aria-hidden="true"></i>
+                                    <span class="badge clients-badge"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="mail-list__item show-icons">
-                    <div class="message">
-                        <div>
-                            <span class="message__content">Your Dropbox Account</span>
-                            <span class="message__time">08:34</span>
-                        </div>
-                        <div>
-                            <span class="message__sender">Dropbox Team</span>
-                            <div class="message__icons">
-                                <i class="fa fa-paperclip" aria-hidden="true"></i>
-                                <i class="fa fa-reply" aria-hidden="true"></i>
-                                <span class="badge clients-badge"></span>
+                    </li>
+                    <li class="mail-list__item show-icons">
+                        <div class="message">
+                            <div>
+                                <span class="message__content">Your Dropbox Account</span>
+                                <span class="message__time">08:34</span>
+                            </div>
+                            <div>
+                                <span class="message__sender">Dropbox Team</span>
+                                <div class="message__icons">
+                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                    <i class="fa fa-reply" aria-hidden="true"></i>
+                                    <span class="badge clients-badge"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="mail-list__item show-icons">
-                    <div class="message">
-                        <div>
-                            <span class="message__content">Order Confirmation</span>
-                            <span class="message__time">Yesterday</span>
-                        </div>
-                        <div>
-                            <span class="message__sender">A Book Apart</span>
-                            <div class="message__icons">
-                                <i class="fa fa-paperclip" aria-hidden="true"></i>
-                                <i class="fa fa-reply" aria-hidden="true"></i>
-                                <span class="badge clients-badge"></span>
+                    </li>
+                    <li class="mail-list__item show-icons">
+                        <div class="message">
+                            <div>
+                                <span class="message__content">Order Confirmation</span>
+                                <span class="message__time">Yesterday</span>
+                            </div>
+                            <div>
+                                <span class="message__sender">A Book Apart</span>
+                                <div class="message__icons">
+                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                    <i class="fa fa-reply" aria-hidden="true"></i>
+                                    <span class="badge clients-badge"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="mail-list__item show-icons">
-                    <div class="message">
-                        <div>
-                            <span class="message__content">Check this crazy video</span>
-                            <span class="message__time">Yesterday</span>
-                        </div>
-                        <div>
-                            <span class="message__sender">Antoine Farjon</span>
-                            <div class="message__icons">
-                                <i class="fa fa-paperclip" aria-hidden="true"></i>
-                                <i class="fa fa-reply" aria-hidden="true"></i>
-                                <span class="badge personal-badge"></span>
+                    </li>
+                    <li class="mail-list__item show-icons">
+                        <div class="message">
+                            <div>
+                                <span class="message__content">Check this crazy video</span>
+                                <span class="message__time">Yesterday</span>
+                            </div>
+                            <div>
+                                <span class="message__sender">Antoine Farjon</span>
+                                <div class="message__icons">
+                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                    <i class="fa fa-reply" aria-hidden="true"></i>
+                                    <span class="badge personal-badge"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="mail-list__item show-icons">
-                    <div class="message">
-                        <div>
-                            <span class="message__content">Hello Vincent</span>
-                            <span class="message__time">04/04/14</span>
-                        </div>
-                        <div>
-                            <span class="message__sender">Maxime Messer</span>
-                            <div class="message__icons">
-                                <i class="fa fa-paperclip" aria-hidden="true"></i>
-                                <i class="fa fa-reply" aria-hidden="true"></i>
-                                <span class="badge archives-badge"></span>
+                    </li>
+                    <li class="mail-list__item show-icons">
+                        <div class="message">
+                            <div>
+                                <span class="message__content">Hello Vincent</span>
+                                <span class="message__time">04/04/14</span>
+                            </div>
+                            <div>
+                                <span class="message__sender">Maxime Messer</span>
+                                <div class="message__icons">
+                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                    <i class="fa fa-reply" aria-hidden="true"></i>
+                                    <span class="badge archives-badge"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="mail-list__item show-icons">
-                    <div class="message">
-                        <div>
-                            <span class="message__content">Comment on your article</span>
-                            <span class="message__time">02/04/14</span>
-                        </div>
-                        <div>
-                            <span class="message__sender">Designmodo</span>
-                            <div class="message__icons">
-                                <i class="fa fa-paperclip" aria-hidden="true"></i>
-                                <i class="fa fa-reply" aria-hidden="true"></i>
-                                <span class="badge friends-badge"></span>
+                    </li>
+                    <li class="mail-list__item show-icons">
+                        <div class="message">
+                            <div>
+                                <span class="message__content">Comment on your article</span>
+                                <span class="message__time">02/04/14</span>
+                            </div>
+                            <div>
+                                <span class="message__sender">Designmodo</span>
+                                <div class="message__icons">
+                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                    <i class="fa fa-reply" aria-hidden="true"></i>
+                                    <span class="badge friends-badge"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="mail-list__item show-icons">
-                    <div class="message">
-                        <div>
-                            <span class="message__content">Amazing weather today</span>
-                            <span class="message__time">02/03/14</span>
-                        </div>
-                        <div>
-                            <span class="message__sender">John Doe</span>
-                            <div class="message__icons">
-                                <i class="fa fa-paperclip" aria-hidden="true"></i>
-                                <i class="fa fa-reply" aria-hidden="true"></i>
-                                <span class="badge family-badge"></span>
+                    </li>
+                    <li class="mail-list__item show-icons">
+                        <div class="message">
+                            <div>
+                                <span class="message__content">Amazing weather today</span>
+                                <span class="message__time">02/03/14</span>
+                            </div>
+                            <div>
+                                <span class="message__sender">John Doe</span>
+                                <div class="message__icons">
+                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                    <i class="fa fa-reply" aria-hidden="true"></i>
+                                    <span class="badge family-badge"></span>
+                                </div>
                             </div>
                         </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="chat">
+                <div class="chat__container">
+                    <div class="chat__details">
+                        <div class="icon">
+                            <span class="personal-badge"></span>
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="profile picture">
+                        </div>
+                        <div class="description">
+                            <span class="subject">Feedbakcs UI ConceptFeedbakcs</span>
+                            <div>
+                                <span>From:</span>
+                                <span class="sender">Anne Thai <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
+                                <div class="sender__details">
+                                    <ul>
+                                        <li>from: <span>Anne Thai</span></li>
+                                        <li>reply-to: <span><a href="mailto: javascript:;">AnneThai@sparrow.com</a></span></li>
+                                        <li>to: <span><a href="mailto: javascript:;">Vincent@sparrow.com</a></span></li>
+                                        <li>date: <span>14/09/2020</span></span></li>
+                                        <li>subject: <span>Feedbakcs UI Concept</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat__icons">
+                            <i class="chat__icons_item fa fa-star" aria-hidden="true"></i>
+                            <i class="chat__icons_item fa fa-file-text" aria-hidden="true"></i>
+                            <i class="chat__icons_item fa fa-trash" aria-hidden="true"></i>
+                            <i class="chat__icons_item fa fa-reply" aria-hidden="true"></i>
+                        </div>
                     </div>
-                </li>
-            </ul>
+                    <div class="chat__content">
+                        <p>
+                            Hello Vincent,
+                        </p>
+                        <p>
+                            Forage Etsy chia cliche sriracha.  Banh mi sustainable stumptown Pitchfork occupy.  Chambray Godard biodiesel Blue Bottle cred fap, you probably haven't heard of them pop-up freegan small batch Shoreditch disrupt four loko viral stumptown.  
+                        </p>
+                        <p>
+                            Banjo deep v Tonx Tumblr.  Forage direct trade  whatever, kale chips lo-fi Blue Bottle DIY church-key flannel street art.  
+                        </p>
+                        <p>
+                            Put a bird on it hella actually leggings.  Brunch authentic slow-carb, four loko post-ironic twee vegan Marfa fap.
+                            Hoodie Tonx whatever, forage brunch Truffaut pug synth slow-carb paleo fingerstache.  
+                        </p>
+                        <p>
+                            Roof party kale chips Neutra, vinyl photo booth dreamcatcher literally.  Flexitarian banh mi 3 wolf moon blog, tofu Etsy ethnic bicycle rights banjo.  Helvetica retro yr kale chips, wolf locavore disrupt Neutra sartorial mlkshk pork belly leggings church-key cardigan.  Blog banh mi bitters tattooed.  Ennui try-hard gentrify, Helvetica Echo Park vegan ethical flannel.  
+                        </p>
+                        <p>
+                            Aesthetic mixtape chambray messenger bag, cred cardigan semiotics dreamcatcher 90's seitan.
+                        </p>
+                        <p>
+                            Flexitarian single-origin coffee cardigan pug Carles, Tonx wolf Portland Pinterest authentic.  
+                        </p>
+                        <p>
+                            Whatever 3 wolf moon artisan synth, flannel locavore Carles iPhone plaid deep v kale chips post-ironic.  Mumblecore selvage ethical Portland McSweeney's raw denim, viral swag put a bird on it pop-up +1 tousled.  Swag Banksy seitan salvia cliche.  
+                        </p>
+                        <p>
+                            Roof party kale chips Neutra, vinyl photo booth dreamcatcher literally.  Flexitarian banh mi 3 wolf moon blog, tofu Etsy ethnic bicycle rights banjo.  Helvetica retro yr kale chips, wolf locavore disrupt Neutra sartorial mlkshk pork belly leggings church-key cardigan.  Blog banh mi bitters tattooed.  Ennui try-hard gentrify, Helvetica Echo Park vegan ethical flannel.  
+                        </p>
+                        <p>
+                            Aesthetic mixtape chambray messenger bag, cred cardigan semiotics dreamcatcher 90's seitan.
+                        </p>
+                        <p>
+                            Flexitarian single-origin coffee cardigan pug Carles, Tonx wolf Portland Pinterest authentic.  
+                        </p>
+                        <p>
+                            Whatever 3 wolf moon artisan synth, flannel locavore Carles iPhone plaid deep v kale chips post-ironic.  Mumblecore selvage ethical Portland McSweeney's raw denim, viral swag put a bird on it pop-up +1 tousled.  Swag Banksy seitan salvia cliche.  
+                        </p>
+                    </div>
+                </div>
+            </section>
         </section>
-        <section class="chat">
-            <div class="chat__container">
-                <div class="chat__details">
-                    <div class="icon">
-                        <span class="personal-badge"></span>
-                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="profile picture">
-                    </div>
-                    <div class="description">
-                        <span class="subject">Feedbakcs UI ConceptFeedbakcs</span>
-                        <div>
-                            <span>From:</span>
-                            <span class="sender">Anne Thai <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
-                            <div class="sender__details">
-                                <ul>
-                                    <li>from: <span>Anne Thai</span></li>
-                                    <li>reply-to: <span><a href="mailto: javascript:;">AnneThai@sparrow.com</a></span></li>
-                                    <li>to: <span><a href="mailto: javascript:;">Vincent@sparrow.com</a></span></li>
-                                    <li>date: <span>14/09/2020</span></span></li>
-                                    <li>subject: <span>Feedbakcs UI Concept</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat__icons">
-                        <i class="chat__icons_item fa fa-star" aria-hidden="true"></i>
-                        <i class="chat__icons_item fa fa-file-text" aria-hidden="true"></i>
-                        <i class="chat__icons_item fa fa-trash" aria-hidden="true"></i>
-                        <i class="chat__icons_item fa fa-reply" aria-hidden="true"></i>
-                    </div>
+        <section class="tab sentmail">
+            <h2>Sent</h2>
+        </section>
+        <section class="tab starred">
+            <h2>Starred</h2>
+        </section>
+        <section class="tab drafts">
+            <h2>Drafts</h2>
+        </section>
+        <section class="tab trash">
+            <h2>Trash</h2>
+        </section>
+        <section class="tab report">
+            <div class="report__data">
+                <div class="mails-sent">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <p>Mails Sent</p>
+                    <span>250</p>
                 </div>
-                <div class="chat__content">
-                    <p>
-                        Hello Vincent,
-                    </p>
-                    <p>
-                        Forage Etsy chia cliche sriracha.  Banh mi sustainable stumptown Pitchfork occupy.  Chambray Godard biodiesel Blue Bottle cred fap, you probably haven't heard of them pop-up freegan small batch Shoreditch disrupt four loko viral stumptown.  
-                    </p>
-                    <p>
-                        Banjo deep v Tonx Tumblr.  Forage direct trade  whatever, kale chips lo-fi Blue Bottle DIY church-key flannel street art.  
-                    </p>
-                    <p>
-                        Put a bird on it hella actually leggings.  Brunch authentic slow-carb, four loko post-ironic twee vegan Marfa fap.
-                        Hoodie Tonx whatever, forage brunch Truffaut pug synth slow-carb paleo fingerstache.  
-                    </p>
-                    <p>
-                        Roof party kale chips Neutra, vinyl photo booth dreamcatcher literally.  Flexitarian banh mi 3 wolf moon blog, tofu Etsy ethnic bicycle rights banjo.  Helvetica retro yr kale chips, wolf locavore disrupt Neutra sartorial mlkshk pork belly leggings church-key cardigan.  Blog banh mi bitters tattooed.  Ennui try-hard gentrify, Helvetica Echo Park vegan ethical flannel.  
-                    </p>
-                    <p>
-                        Aesthetic mixtape chambray messenger bag, cred cardigan semiotics dreamcatcher 90's seitan.
-                    </p>
-                    <p>
-                        Flexitarian single-origin coffee cardigan pug Carles, Tonx wolf Portland Pinterest authentic.  
-                    </p>
-                    <p>
-                        Whatever 3 wolf moon artisan synth, flannel locavore Carles iPhone plaid deep v kale chips post-ironic.  Mumblecore selvage ethical Portland McSweeney's raw denim, viral swag put a bird on it pop-up +1 tousled.  Swag Banksy seitan salvia cliche.  
-                    </p>
-                    <p>
-                        Roof party kale chips Neutra, vinyl photo booth dreamcatcher literally.  Flexitarian banh mi 3 wolf moon blog, tofu Etsy ethnic bicycle rights banjo.  Helvetica retro yr kale chips, wolf locavore disrupt Neutra sartorial mlkshk pork belly leggings church-key cardigan.  Blog banh mi bitters tattooed.  Ennui try-hard gentrify, Helvetica Echo Park vegan ethical flannel.  
-                    </p>
-                    <p>
-                        Aesthetic mixtape chambray messenger bag, cred cardigan semiotics dreamcatcher 90's seitan.
-                    </p>
-                    <p>
-                        Flexitarian single-origin coffee cardigan pug Carles, Tonx wolf Portland Pinterest authentic.  
-                    </p>
-                    <p>
-                        Whatever 3 wolf moon artisan synth, flannel locavore Carles iPhone plaid deep v kale chips post-ironic.  Mumblecore selvage ethical Portland McSweeney's raw denim, viral swag put a bird on it pop-up +1 tousled.  Swag Banksy seitan salvia cliche.  
-                    </p>
+                <div class="mails-recieved">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    <p>Mails Recieved</p>
+                    <span>450</p>
                 </div>
+                <div class="drafts">
+                    <i class="fa fa-file-text" aria-hidden="true"></i>
+                    <p>Drafts</p>
+                    <span>20</p>
+                </div>
+            </div>
+            <div class="chart">
+                <canvas id="myChart" aria-label="usage-time-report"></canvas>
             </div>
         </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
     <script src="dist/scripts/main.js"></script>
 </body>
 </html>

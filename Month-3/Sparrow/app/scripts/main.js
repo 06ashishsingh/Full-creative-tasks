@@ -1,47 +1,55 @@
-;const sidebarMailOptions = document.querySelectorAll('.mail-options__item');
+const sidebarMailOptions = document.querySelectorAll('.mail-options__item');
 const sidebarChatOptions = document.querySelectorAll('.chat-options__item');
 const clientChatDropdown = document.getElementById('chat-dropdown');
 const clientSubList = document.querySelector('.client-sublist');
-const searchDropdown = document.getElementById('searchDropdown');
-const searchDropdownList = document.querySelector('.search__list');
-const searchInput = document.querySelector('.search__input');
+// const searchDropdown = document.getElementById('searchDropdown');
+// const searchDropdownList = document.querySelector('.search__list');
+// const searchInput = document.querySelector('.search__input');
 const mailListItem = document.querySelectorAll('.mail-list__item');
-const chatIconsList = document.querySelectorAll('.chat__icons_item');
-const sender = document.querySelector('.sender');
-const senderDeatils = document.querySelector('.sender__details');
+// const chatIconsList = document.querySelectorAll('.chat__icons_item');
+// const sender = document.querySelector('.sender');
+// const senderDeatils = document.querySelector('.sender__details');
 
-searchDropdown.addEventListener('click',function(){
-    searchDropdownList.classList.toggle('search__list-show');
-}); 
+// searchDropdown.addEventListener('click',function(){
+//     searchDropdownList.classList.toggle('search__list-show');
+// }); 
 
-searchInput.addEventListener('click',function(){
-    searchDropdownList.classList.add('search__list-show');
-})
+// mailOptionsActive();
+// mailListActive();
+// chatIconsActive();
+
+const tabsList = document.querySelectorAll('.tab');
 
 
-mailOptionsActive();
-chatOptionsActive();
-mailListActive();
-chatIconsActive();
-
-function mailOptionsActive(){
+function openTabs(){
 
     for(let i=0;i<sidebarMailOptions.length;i++)
     {
-        sidebarMailOptions[i].addEventListener('click',function(){
 
+        if(i==0)
+        {
+            sidebarMailOptions[0].classList.add('mail-options-active');
+            tabsList[0].style.display = 'block';
+        }
+
+        sidebarMailOptions[i].addEventListener('click',function(){
+            
             for(let j=0;j<sidebarMailOptions.length;j++)
             {
-                if(j!=i){
+                if(j!=i)
+                {
                     sidebarMailOptions[j].classList.remove('mail-options-active');
+                    tabsList[j].style.display = 'none';
                 }
             }
-            
-            this.classList.toggle('mail-options-active');
+
+            this.classList.add('mail-options-active');
+
+            tabsList[i].style.display = 'block';
+
         });
     }
 }
-
 
 function chatOptionsActive(){
 
@@ -61,6 +69,24 @@ function chatOptionsActive(){
     }
 }
 
+
+
+
+clientChatDropdown.addEventListener('click',function(event){
+
+    event.stopPropagation();
+
+    if(clientSubList.style.maxHeight)
+    {
+        clientSubList.style.maxHeight = null;
+    }
+    else
+    {
+        clientSubList.style.maxHeight = clientSubList.scrollHeight + 'px';
+    }
+    
+});
+
 function mailListActive(){
     
     for(let i=0;i<mailListItem.length;i++)
@@ -79,51 +105,62 @@ function mailListActive(){
     }
 }
 
-function chatIconsActive(){
 
-    for(let i=0;i<chatIconsList.length;i++)
-    {
-        chatIconsList[i].addEventListener('click',function(){
+openTabs();
+chatOptionsActive();
+mailListActive();
 
-            this.classList.toggle('chat-icons-active');
-        })
-    }
-}
+// function mailOptionsActive(){
+
+//     for(let i=0;i<sidebarMailOptions.length;i++)
+//     {
+//         sidebarMailOptions[i].addEventListener('click',function(){
+
+//             for(let j=0;j<sidebarMailOptions.length;j++)
+//             {
+//                 if(j!=i){
+//                     sidebarMailOptions[j].classList.remove('mail-options-active');
+//                 }
+//             }
+            
+//             this.classList.toggle('mail-options-active');
+//         });
+//     }
+// }
 
 
-clientChatDropdown.addEventListener('click',function(event){
 
-    event.stopPropagation();
+// function chatIconsActive(){
 
-    if(clientSubList.style.maxHeight)
-    {
-        clientSubList.style.maxHeight = null;
-    }
-    else
-    {
-        clientSubList.style.maxHeight = clientSubList.scrollHeight + 'px';
-    }
-    
-});
+//     for(let i=0;i<chatIconsList.length;i++)
+//     {
+//         chatIconsList[i].addEventListener('click',function(){
 
-sender.addEventListener('click',function(){
+//             this.classList.toggle('chat-icons-active');
+//         })
+//     }
+// }
 
-    senderDeatils.classList.toggle('sender-details-show');
+// sender.addEventListener('click',function(){
 
-});
+//     senderDeatils.classList.toggle('sender-details-show');
 
-window.onclick = function(event){
+// });
 
-    if(event.target!=searchDropdown && event.target!=searchInput)
-    {
-        searchDropdownList.classList.remove('search__list-show');
-    }
+// window.onclick = function(event){
 
-    if(event.target!=sender)
-    {
-        senderDeatils.classList.remove('sender-details-show');
-    }
-}
+//     console.log(event.target);
+
+//     if(event.target!=searchDropdown)
+//     {
+//         searchDropdownList.classList.remove('search__list-show');
+//     }
+
+//     if(event.target!=sender)
+//     {
+//         senderDeatils.classList.remove('sender-details-show');
+//     }
+// }
 
 
 

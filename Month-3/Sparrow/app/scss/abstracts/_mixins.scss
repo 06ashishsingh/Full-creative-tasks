@@ -5,3 +5,20 @@
         display: block;
     }
 }
+
+@mixin size($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin padding($values...) {
+    @each $var in $values {
+        padding: $values;
+    }
+}
+
+@mixin margin($values...) {
+    @each $var in $values {
+        margin: $values;
+    }
+}
