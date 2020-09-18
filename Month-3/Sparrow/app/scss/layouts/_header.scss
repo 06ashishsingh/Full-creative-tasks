@@ -2,7 +2,7 @@ header{
     width: 100%;
     position: fixed;
     top: 0;
-    padding: 21px;
+    @include padding(21px);
     font-size: 16px;
     line-height: 1.5;
     z-index: 1;
@@ -18,16 +18,14 @@ header{
             display: inline-block;
             vertical-align: top;
             border-radius: 0% 0% 50% 50%;
-            width: 15px;
-            height: 20px;
+            @include size(15px,20px);
             background-color: $color-black-900;
         }
     }
 
     .brand{
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
+
+        @include horizontal-centering(relative);
         color: $color-grey-400;
 
         span{
@@ -53,7 +51,7 @@ form{
 
         li{
             font-size: 14px;
-            padding: 5px;
+            @include padding(5px);
         }
 
         li:hover{
@@ -83,7 +81,7 @@ form{
     }
 
     input[type=text]{
-        padding-left: 12px;
+        @include padding(0 0 0 12px);
         font-size: 14px;
         width: 290px;
     }

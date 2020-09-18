@@ -30,7 +30,6 @@
     <main>
         <section class="sidebar">
             <button class="compose">Compose</button>
-            <div>
             <ul class="mail-options">
                 <li class="mail-options__item"><i class="fa fa-inbox" aria-hidden="true"></i> <a href="javascript:;">inbox <span>(2)</span></a></li>
                 <li class="mail-options__item"><i class="fa fa-upload" aria-hidden="true"></i> <a href="javascript:;"> sent mail <span></span></a></li>
@@ -51,7 +50,6 @@
                 <li class="chat-options__item"><span class="friends-badge"></span><a href="javascript:;">Friends <span></span></a></li>
                 <li class="chat-options__item"><span class="archives-badge"></span><a href="javascript:;">Archives <span></span></a></li>
             </ul>
-            </div>
             <div class="button-group">
                 <button class="setting"><i class="fa fa-cog" aria-hidden="true"></i></button>
                 <button class="user"><i class="fa fa-user" aria-hidden="true"></i></button>
@@ -59,8 +57,12 @@
         </section>
         <section class="tab inbox">
             <section class="mails">
+                <div class="filter__container">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input id="filter" type="text" placeholder="Search...">
+                </div>
                 <ul class="mail-list">
-                    <li class="mail-list__item show-icons">
+                    <li class="mail-list__item">
                         <div class="message">
                             <div>
                                 <span class="message__content">My portfolio is up</span>
@@ -69,8 +71,8 @@
                             <div>
                                 <span class="message__sender">Jimmy Raherlarisoa</span>
                                 <div class="message__icons">
-                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
-                                    <i class="fa fa-reply" aria-hidden="true"></i>
+                                    <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+                                    <i class="fa fa-reply reply" aria-hidden="true"></i>
                                     <span class="badge personal-badge"></span>
                                 </div>
                             </div>
@@ -309,7 +311,7 @@
                 </div>
             </div>
             <div class="chart">
-                <canvas id="myChart" aria-label="usage-time-report"></canvas>
+                <canvas id="TimeChart" aria-label="usage-time-report"></canvas>
             </div>
         </section>
     </main>

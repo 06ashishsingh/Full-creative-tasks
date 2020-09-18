@@ -4,27 +4,36 @@
 
 .chart{
     width: 75%;
-    @include margin(0 auto);
+    @include margin(20px auto 0 auto);
 }
 
 
 .report__data{
-    @include size(100%,25%);
+    width: 100%;
     @include clearfix;
 
     .mails-sent,.mails-recieved,.drafts{
-        width: 30%;
+        width: calc((100% - 40px) / 3);
         float: left;
         text-align: center;
         background-color: $color-white-900;
-        @include margin(0 0 0 30px);
+        @include margin(0 0 0 20px);
         @include padding(15px);
         border-radius: 5px;
+        font-weight: bolder;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
     }
-    
+
+    .mails-sent{
+        margin-left: 0px;
+    }
+
     i{
-        font-size: 35px;
+        font-size: 30px;
+    }
+
+    p{
+        @include margin(10px 0);
     }
 
     p,span{
@@ -32,7 +41,6 @@
     }
 
     p,span,i{
-        @include margin(0 0 10px 0);
         color: $color-black-200;
     }
 }

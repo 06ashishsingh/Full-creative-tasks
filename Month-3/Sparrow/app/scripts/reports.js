@@ -1,4 +1,4 @@
-const usageChart = document.getElementById('myChart').getContext('2d');
+const usageChart = document.getElementById('TimeChart').getContext('2d');
 
 let barChart = new Chart(usageChart,{
     type: 'bar',
@@ -8,9 +8,7 @@ let barChart = new Chart(usageChart,{
         {
           label: "Time (Hours)",
           data: [4,1.2,1.5,2,4,3,2.5,0,8],
-          backgroundColor:'#007aff',   
-          borderColor: [],
-          borderWidth: 1           
+          backgroundColor:'#007aff',        
         }
       ]
     },

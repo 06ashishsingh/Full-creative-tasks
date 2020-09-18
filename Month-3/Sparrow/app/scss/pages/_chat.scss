@@ -10,7 +10,7 @@
 
 .chat__details{
     position: relative;
-    padding-bottom: 40px;
+    @include padding(0 0 40px 0);
     border-bottom: 2px solid $color-grey-100;
 
     .icon{

@@ -1,16 +1,15 @@
 .sidebar{
     float: left;
     position: relative;
-    width: 15%;
-    // overflow-y: scroll;
-    height: 100%;
+    @include size(15%,100%);
+    overflow-y: auto;
 
 
     .compose{
         display: inline-block;
-        margin: 21px 0px 0px 15px;
+        @include margin(21px 0px 0px 15px);
         border-radius: 2px;
-        padding: 10px 52px;
+        @include padding(10px 52px);
         font-size: 12px;
         color: $color-white-900;
         text-transform: uppercase;
@@ -21,11 +20,13 @@
 .mail-options{
     
     padding: 0px 21px;
-    margin-top: 28px;
+    @include padding(0px 21px);
+    @include margin(28px 0 0 0);
 
     .mail-options__item{
 
-        margin-top: 12px;
+        @include margin(12px 0 0 0);
+
 
         i{
             font-size: 18px;
@@ -36,7 +37,7 @@
             background-color: inherit;
             text-transform: capitalize;
             font-size: 14px;
-            margin-left: 12px;
+            @include margin(0 0 0 12px);
         }  
            
     }
@@ -48,24 +49,23 @@
 }
 
 .chat-options{
-    margin-top: 37px;
-    overflow: auto;
+    @include margin(37px 0 80px 0);
 
     .chat-options__item{
-        padding: 8px 10px 8px 25px;
+        @include padding(8px 10px 8px 25px);
 
         a{
             font-size: 14px;
             background-color: transparent;
-            margin-left: 15px;
+            @include margin(0 0 0 15px);
         }
 
         .fa-angle-down{
             font-size: 12px;
             cursor: pointer;
             float: right;
-            margin-top: 5px;
-            padding: 0px 2px;
+            @include margin(5px 0 0 0);
+            @include padding(0px 2px);
             color: $color-white-900;
             background-color: $color-black-300;
         }
@@ -80,14 +80,14 @@
 
         li{
             font-weight: 600;
-            padding: 10px 21px 10px 26px;
+            @include padding(10px 21px 10px 26px);
 
             .badge{
                 width: 1px;
                 height: 1px;
                 border-radius: 50%;
                 border-width: 2px;
-                margin-right: 23px;
+                @include margin(0px 23px 0 0);
             }
         }
 
@@ -104,19 +104,16 @@
 
 .button-group{
     
-    // position: relative;
-    // top: 50%;
-    // transform: translateY(-50%);
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 15%;
     color: $color-black-100;
     font-size: 0;
     background-color: $color-white-500;
 
     button{
         font-size: 18px;
-        padding: 20px 0px;
+        @include padding(20px 0px);
         width: 50%;
     }
 

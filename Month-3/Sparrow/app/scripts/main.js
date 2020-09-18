@@ -1,25 +1,73 @@
+// sidebar
 const sidebarMailOptions = document.querySelectorAll('.mail-options__item');
 const sidebarChatOptions = document.querySelectorAll('.chat-options__item');
+
+// sidebar client list
 const clientChatDropdown = document.getElementById('chat-dropdown');
 const clientSubList = document.querySelector('.client-sublist');
-// const searchDropdown = document.getElementById('searchDropdown');
-// const searchDropdownList = document.querySelector('.search__list');
-// const searchInput = document.querySelector('.search__input');
+
+// search dropdown
+const searchDropdown = document.getElementById('searchDropdown');
+const searchDropdownList = document.querySelector('.search__list');
+
+// chat icons 
+const chatIconsList = document.querySelectorAll('.chat__icons_item');
+
+// mailing list
 const mailListItem = document.querySelectorAll('.mail-list__item');
-// const chatIconsList = document.querySelectorAll('.chat__icons_item');
-// const sender = document.querySelector('.sender');
-// const senderDeatils = document.querySelector('.sender__details');
 
-// searchDropdown.addEventListener('click',function(){
-//     searchDropdownList.classList.toggle('search__list-show');
-// }); 
+// sender dropdown
+const sender = document.querySelector('.sender');
+const senderDeatils = document.querySelector('.sender__details');
 
-// mailOptionsActive();
-// mailListActive();
-// chatIconsActive();
-
+// sidebar tabs
 const tabsList = document.querySelectorAll('.tab');
 
+// filter mail list
+const filter = document.getElementById('filter');
+
+
+filter.addEventListener('keyup',function(){
+
+    let value = filter.value.toUpperCase();
+
+    for(let i=0;i<mailListItem.length;i++)
+    {
+        let message = document.querySelectorAll('.message__content')[i];
+        let messageValue = message.innerText || message.textContent;
+
+        if(messageValue.toUpperCase().indexOf(value)>-1)
+        {
+            mailListItem[i].style.display = "";    
+        }
+        else
+        {
+            mailListItem[i].style.display = "none";  
+        }
+    }
+})
+
+searchDropdown.addEventListener('click',function(){
+    searchDropdownList.classList.toggle('search__list-show');
+}); 
+
+sender.addEventListener('click',function(){
+    senderDeatils.classList.toggle('sender-details-show');
+});
+
+
+window.onclick = function(event){
+
+    if(event.target!=searchDropdown)
+    {
+        searchDropdownList.classList.remove('search__list-show');
+    }
+
+    if(event.target!=sender)
+    {
+        senderDeatils.classList.remove('sender-details-show');
+    }
+}
 
 function openTabs(){
 
@@ -70,8 +118,6 @@ function chatOptionsActive(){
 }
 
 
-
-
 clientChatDropdown.addEventListener('click',function(event){
 
     event.stopPropagation();
@@ -106,61 +152,29 @@ function mailListActive(){
 }
 
 
+function chatIconsActive(){
+
+    for(let i=0;i<chatIconsList.length;i++)
+    {
+        chatIconsList[i].addEventListener('click',function(){
+
+            this.classList.toggle('chat-icons-active');
+        })
+    }
+}
+
+
 openTabs();
 chatOptionsActive();
 mailListActive();
-
-// function mailOptionsActive(){
-
-//     for(let i=0;i<sidebarMailOptions.length;i++)
-//     {
-//         sidebarMailOptions[i].addEventListener('click',function(){
-
-//             for(let j=0;j<sidebarMailOptions.length;j++)
-//             {
-//                 if(j!=i){
-//                     sidebarMailOptions[j].classList.remove('mail-options-active');
-//                 }
-//             }
-            
-//             this.classList.toggle('mail-options-active');
-//         });
-//     }
-// }
+chatIconsActive();
 
 
 
-// function chatIconsActive(){
 
-//     for(let i=0;i<chatIconsList.length;i++)
-//     {
-//         chatIconsList[i].addEventListener('click',function(){
 
-//             this.classList.toggle('chat-icons-active');
-//         })
-//     }
-// }
 
-// sender.addEventListener('click',function(){
 
-//     senderDeatils.classList.toggle('sender-details-show');
-
-// });
-
-// window.onclick = function(event){
-
-//     console.log(event.target);
-
-//     if(event.target!=searchDropdown)
-//     {
-//         searchDropdownList.classList.remove('search__list-show');
-//     }
-
-//     if(event.target!=sender)
-//     {
-//         senderDeatils.classList.remove('sender-details-show');
-//     }
-// }
 
 
 

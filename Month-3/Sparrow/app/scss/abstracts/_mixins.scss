@@ -22,3 +22,25 @@
         margin: $values;
     }
 }
+
+@mixin vertical-center($position) {
+    position: $position;
+    top:50%;
+    -webkit-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    transform:translateY(-50%);
+}
+
+@mixin horizontal-centering($positon) {
+    position:$positon;
+    left: 50%;
+    -webkit-transform:translateX(-50%);
+    -ms-transform:translateX(-50%);
+    transform:translateX(-50%);
+}
+
+@mixin text-clipping {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
