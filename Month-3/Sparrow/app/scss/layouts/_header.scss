@@ -25,7 +25,7 @@ header{
 
     .brand{
 
-        @include horizontal-centering(relative);
+        @include horizontal-centering(absolute);
         color: $color-grey-400;
 
         span{

@@ -16,7 +16,7 @@
             <div class="search">
                 <i class="fa fa-search"></i>
                 <i id="searchDropdown" class="fa fa-angle-down"></i>
-                <input class="search__input" type="text">
+                <input class="search__input" type="text" placeholder="Search here...">
                 <ul class="search__list">
                     <li>Personal</li>
                     <li>Clients</li>
@@ -29,7 +29,30 @@
     </header>
     <main>
         <section class="sidebar">
-            <button class="compose">Compose</button>
+            <button class="compose-btn">Compose</button>
+            <div class="compose-overlay">
+                <section class="compose-mail">
+                    <div class="compose-mail__header">
+                        <span>New Message</span>
+                        <i  class="fa fa-close close-overlay" aria-hidden="true"></i>
+                    </div>
+                    <div class="compose-mail__body">
+                        <div class="email-recipient" tabindex="1">
+                            <div id="recipent-text" class="text">
+                                Recipients
+                            </div>
+                        </div>
+                        <div class="emailInput-container">
+                            <span class="text">To</span>
+                            <textarea rows="1" id="email-textarea" spellcheck="false" autocapitalize="off" autocomplete="false" ></textarea>
+                        </div>
+                        <input id="email-subject" class="email-subject" type="text" placeholder="Subject">
+                    </div>
+                    <div class="compose-mail__footer">
+                        <button id="send-mail">Send</button>
+                    </div>
+                </section>
+            </div>
             <ul class="mail-options">
                 <li class="mail-options__item"><i class="fa fa-inbox" aria-hidden="true"></i> <a href="javascript:;">inbox <span>(2)</span></a></li>
                 <li class="mail-options__item"><i class="fa fa-upload" aria-hidden="true"></i> <a href="javascript:;"> sent mail <span></span></a></li>
@@ -59,7 +82,7 @@
             <section class="mails">
                 <div class="filter__container">
                     <i class="fa fa-search" aria-hidden="true"></i>
-                    <input id="filter" type="text" placeholder="Search...">
+                    <input id="filter" type="text" placeholder="Search messages...">
                 </div>
                 <ul class="mail-list">
                     <li class="mail-list__item">

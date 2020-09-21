@@ -1,0 +1,148 @@
+.compose-overlay{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+    overflow: auto;
+}
+
+.show-compose-overlay{
+    display: block;
+}
+
+.compose-mail{
+    @include center(relative);
+    @include size(500px,60vh);
+    border-radius: 8px 8px 0px 0px;
+    animation: compose-animation 0.5s ease-in-out;
+}
+
+
+
+.compose-mail__header{
+    width: 100%;
+    @include padding(10px);
+    background-color: $color-black-800;
+    color: $color-white-900;
+    font-size: 14px;
+    border-radius: 8px 8px 0px 0px;
+    @include clearfix;
+
+    .close-overlay{
+        float: right;
+        @include padding(2px);
+
+        &:hover{
+            background-color: $color-black-100;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.compose-mail__body{
+
+    background-color: $color-white-900;
+    @include padding(0px 5px);
+    @include size(100%,80%);
+
+    .email-recipient{
+        outline: none;
+        cursor: text;
+        width: 100%;
+        @include padding(10px 5px);
+        border-bottom: 1px solid $color-white-200;
+    }
+
+    .text{
+        display: inline-block;
+        font-size:13px;
+        color: $color-black-100;
+    }
+
+    .emailInput-container{
+        display: none;
+        border-bottom: 1px solid $color-white-200;
+        @include padding(10px 5px);
+
+        textarea,.active-textarea{
+            overflow: hidden;
+            font-family: inherit;
+            font-size: 13px;
+            vertical-align: top;
+            outline: 0;
+            @include margin(0px 4px);
+            resize: none;
+        }
+    }
+    
+    .email-subject{
+        @include padding(10px 5px);
+        font-size: 13px;
+        width: 100%;
+        border-bottom: 1px solid $color-white-200;
+    }
+}
+
+.compose-mail__footer{
+    position: absolute;
+    @include padding(10px);
+    width: 100%;
+    bottom: 0;
+    background-color: white;
+
+    button{
+        border-radius: 2px;
+        @include padding(10px 25px);
+        color: $color-white-900;
+        line-height: 1.2;
+        background-color: $color-blue-400;
+
+        &:hover{
+            background-color: $color-blue-500;
+        }
+    }
+}
+
+
+@include keyframes(compose-animation){
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+.remove-highlight::before{
+    @include margin(0 0 0 3px);
+    font-family: 'FontAwesome';
+    content: "\f00d";
+    cursor: pointer;
+}
+
+
+.highlight,.highlight-error{
+    vertical-align: top;
+    display: inline-block;
+    font-size:13px;
+    @include padding(2px 5px);
+    border-radius:15px;
+    border:1px solid grey;
+    color: grey;
+    @include margin(0 0px 5px 2px);
+}
+
+.highlight-error{
+    background-color:$color-red;
+    color: $color-white-900;
+}

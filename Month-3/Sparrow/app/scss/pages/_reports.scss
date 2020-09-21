@@ -1,5 +1,6 @@
 .report{
     @include padding(20px);
+    overflow: auto;
 }
 
 .chart{
@@ -21,7 +22,12 @@
         @include padding(15px);
         border-radius: 5px;
         font-weight: bolder;
+        cursor: pointer;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+
+        &:hover{
+            transform: scale(0.99,0.99);
+        }
     }
 
     .mails-sent{
