@@ -316,6 +316,7 @@
     }
 
     @include breakpoint(small){
+        display: none;
 
         .left{
 
@@ -328,6 +329,14 @@
                 max-width: 140px;
             }
         }
+
+        .right{
+            display: none;
+        }
+    }
+
+    @include breakpoint(medium){
+        display: none;
     }
 }
 
