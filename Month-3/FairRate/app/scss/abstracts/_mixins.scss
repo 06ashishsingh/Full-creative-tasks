@@ -1,0 +1,148 @@
+@mixin clearfix {
+    &::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+
+@mixin text-clipping{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+@mixin size($width,$height:$width){
+    width: $width;
+    height: $height;
+}
+
+@mixin padding($values...) {
+    @each $var in $values {
+        padding: #{$var};
+    }
+}
+
+@mixin margin($values...) {
+    @each $var in $values{
+        margin: #{$var};
+    }
+}
+
+
+@mixin center-block {
+    display: block;
+    margin: 0 auto;
+}
+
+
+@mixin center($position) {
+
+    @if $position=='vertical' {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    @else if $position=='horizontal'{
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    @else if $position=='both'{
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }   
+}
+
+// @mixin padding($value){
+
+//     @if ($value) {
+
+//         @for $var from 1 through 5 {
+
+//             .pl-#{$value * $var}{
+//                 padding-left: $value * $var + px;
+//             }
+
+//             .pr-#{$value * $var}{
+//                 padding-right: $value * $var + px;
+//             }
+
+//             .pt-#{$value * $var}{
+//                 padding-top: $value * $var + px; 
+//             }
+
+//             .pb-#{$value * $var}{
+//                 padding-bottom: $value * $var + px;
+//             }
+
+//             .px-#{$value * $var}{
+//                 padding-left: $value * $var + px;
+//                 padding-right: $value * $var + px;
+//             }
+
+//             .py-#{$value * $var}{
+//                 padding-top: $value * $var + px;
+//                 padding-bottom: $value * $var + px;
+//             }
+//         }
+//     }
+// }
+
+
+// @mixin margin($value) {
+    
+//     @if($value){
+
+//         @for $var from 1 to 5{
+
+//             .ml-#{$value * $var}{
+//                 margin-left: $value * $var + px;
+//             }
+
+//             .mr-#{$value * $var}{
+//                 margin-right: $value * $var + px;
+//             }
+
+//             .mt-#{$value * $var}{
+//                 margin-top: $value * $var + px;
+//             }
+
+//             .mb-#{$value * $var}{
+//                 margin-bottom: $value * $var + px;
+//             }
+
+//             .mx-#{$value * $var}{
+//                 margin-left: $value * $var + px;
+//                 margin-right: $value * $var + px;
+//             }
+
+//             .my-#{$value * $var}{
+//                 margin-top: $value * $var + px;
+//                 margin-bottom: $value * $var + px;
+//             }
+//         }
+//     }
+// }
+
+
+@mixin keyframes($name) {
+    
+    @-webkit-keyframes #{$name}{
+        @content;
+    }
+
+    @-moz-keyframes #{$name}{
+        @content;
+    }
+
+    @keyframes #{$name}{
+        @content;
+    }
+}

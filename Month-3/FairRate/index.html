@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FairRate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <a class="header__icon" href="javascript:;">
+            <img src="dist/images/hamburger.png" alt="hamburger-icon">
+        </a>
+        <a class="header__logo" href="javascript:;">
+            <img src="dist/images/fairrate-logo.png" alt="fairrate-logo">
+        </a>
+        <nav class="nav">
+            <ul>
+                <li class="nav__item">
+                    <a class="link" href="javascript:;">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a class="link link--active" href="javascript:;">Application</a>
+                </li>
+                <li class="nav__item">
+                    <a class="link" href="javascript:;">Documents</a>
+                </li>
+            </ul>
+            <ul class="profile">
+                <li class="profile__item">
+                    <!-- <i class="fa fa-bell-o icon__bell" aria-hidden="true"></i> -->
+                </li>
+                <li class="profile__item">
+                    <div class="wrapper">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="profile-image">
+                    </div>
+                </li>
+                <li class="profile__item">
+                    <a class="link link--active" href="javascript:;">Adrian Manea</a>
+                    <!-- <i id="dropdown-icon" class="fa fa-caret-down icon__dropdown" aria-hidden="true"></i> -->
+                    <ul id="header-dropdown" class="dropdown">
+                        <li class="dropdown__item"><a href="javascript:;">Dashboard</a></li>
+                        <li class="dropdown__item"><a href="javascript:;">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="name-section" class="name">
+            <div class="container">
+                <h1>I'll get you an awesome price <br> in seconds. Ready to go?</h1>
+                <form>
+                    <input type="text" class="input" placeholder="First name">
+                    <input type="text" class="input input--last" placeholder="Last name">
+                    <button id="name-next-btn" class="btn btn--next" type="button">NEXT</button>
+                </form>
+            </div>
+        </section>
+        <section id="address-section" class="address">
+            <div class="container">
+                <div class="address__left">
+                    <h1>Fill the form on <br> the right</h1>
+                    <p>Fusce dapibus, tellus ac cursus commodo, <br> tortor mauris condimentum nibh.</p>
+                </div>
+                <div class="address__right">
+                    <form class="form">
+                        <div class="input">
+                            <!-- <img src="dist/images/location.svg" class="icon__location" alt=""> -->
+                            <input class="input__primary" type="text" placeholder="Enter the exact address">
+                        </div>
+                        <div class="input">
+                            <!-- <img src="dist/images/mail-outline.svg" class="icon__mail" alt=""> -->
+                            <input class="input__primary" type="text" placeholder="Email Address">
+                        </div>
+                        <div class="input input--secondary checkbox">
+                            <label class="checkbox-wrapper">Condo
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="input input--secondary checkbox">
+                            <label class="checkbox-wrapper">Co-op
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="dob">
+                            <label class="dob__text uppercase">Date of Birth</label>
+                            <div class="input">
+                                <!-- <i class="fa fa-calendar icon--calendar" aria-hidden="true"></i> -->
+                                <input id="date-picker" type="text" class="input__primary" placeholder="Select a date" data-Input>
+                            </div>
+                        </div>
+                        <div class="input checkbox">
+                            <label class="checkbox-wrapper">House
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="select-wrapper">
+                            <div class="input input--select">
+                                <span class="input__text">I don't know</span>
+                            </div>
+                            <div class="dropdown-arrow"></div>
+                            <ul class="dropdown">
+                                <li class="dropdown__item">This Month</li>
+                                <li class="dropdown__item">Next Month</li>
+                                <li class="dropdown__item">December 2019</li>
+                                <li class="dropdown__item">January 2019</li>
+                                <li class="dropdown__item">I don't know</li>
+                            </ul>
+                        </div>
+                        <div class="input input__alarm checkbox">
+                            <!-- <img src="dist/images/criminal.svg" class="icon--criminal" alt=""> -->
+                            <!-- <input class="input__checkbox" type="checkbox"><span class="input--text">Burglar Alarm</span>/ -->
+                            <label class="checkbox-wrapper">Burglar Alarm
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="input input__alarm checkbox">
+                            <!-- <i class="fa fa-fire icon--fire" aria-hidden="true"></i> -->
+                            <label class="checkbox-wrapper">Burglar Alarm
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="form__button-group">
+                            <button class="btn btn--back" type="button">Back</button>
+                            <button class="btn btn--next" type="button">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="upload-section" class="upload">
+            <div class="container">
+                <h1>Few more step ahead <br>
+                    upload your ID Document 👆
+                </h1>
+                <div class="upload__button-group">
+                    <button class="btn btn--active uppercase">Photo Indentification</button>
+                    <button class="btn btn--inactive uppercase">Proof of Address</button>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <h2>Upload photo Indentification</h2>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__left">
+                            <div class="file-wrapper">
+                                <div>
+                                    <span>Drag files here to upload or</span> <br>
+                                    <span><a class="underline" href="javascript:;">Select a file</a><input type="file"><span>
+                                    <span>from you device</span>
+                                </div>
+                                <p>JPG, PNG or PDF only, maximum file size - 5MB</p>
+                            </div>
+                        </div>
+                        <div class="card__right">
+                            <h3 class="uppercase">Your Document Must Be:</h3>
+                            <ul class="card__list">
+                                <li>A Government Issued</li>
+                                <ul class="card__sub-list">
+                                    <li>Passport</li>
+                                    <li>Driver License</li>
+                                    <li>National ID Card</li>
+                                </ul>
+                                <li>Within it's expiry Date</li>
+                            </ul>
+                            <a class="underline" href="javascript:;">See an example image</a>
+                        </div>
+                    </div>
+                    <div class="card__footer"></div>
+                </div>
+                <button class="btn btn--back">Back</button>
+                <button class="btn btn--next">Next</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <ul>
+                <li class="item">
+                    <span>Schedule a conversation</span>
+                    <br>
+                    <a class="link link__email" href="mailto:hello@fairrate.com">hello@fairrate.com</a>
+                </li>
+                <li class="item">
+                    <i class="fa fa-phone icon__tele" aria-hidden="true"></i>
+                    <a class="link link__tele" href="tel:+6220255500177">+62 202 555 0117</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="item item--heading">
+                    <span class="uppercase">Company</span>
+                </li>
+                <li class="item">
+                    <a class="link" href="javascript:;">Resources</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="javascript:;">Careers</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="item item--heading">
+                    <span class="uppercase">Legal</span>
+                </li>
+                <li class="item">
+                    <a class="link" href="javascript:;">NMLS Consumer Access</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="javascript:;">Privacy Policy</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="javascript:;">Terms of Use</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="javascript:;">Disclousers & Licensing</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="item">
+                    <a class="link" href="javascript:;">
+                        <img src="dist/images/fairrate-logo.png" alt="fairrate-logo">
+                    </a>
+                    <p class="para">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna.</p>
+                </li>
+            </ul>
+            <span>© 2018 Deivas.io, Inc. All rights reserved.</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="dist/scripts/main.js"></script>
+</body>
+</html>

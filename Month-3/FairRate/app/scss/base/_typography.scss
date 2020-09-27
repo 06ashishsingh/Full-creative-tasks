@@ -1,0 +1,17 @@
+body{
+    font-size: $text-base-size;
+    font-family: $font-stack;
+}
+
+h1{
+    font-size: 36px;
+    line-height: 1.5;
+    color: $color-black-800;
+}
+
+p{
+    font-size: 14px;
+    color: $color-grey-300;
+    font-weight: bold;
+    line-height: 1.5;
+}

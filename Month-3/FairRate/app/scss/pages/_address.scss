@@ -1,0 +1,218 @@
+.address{
+    display: none;
+    background-color: $color-grey-100; 
+    @include padding(75px 0px);
+
+    .container{
+        position: relative;
+        @include clearfix;
+    }
+
+    &__left{
+        @include center-block;
+        float: left;
+        width: 50%;
+        @include padding(50px);
+
+        h1{
+            @include margin(0 0 10px 0);
+        }
+
+        p{
+            @include margin(0 0 60px 0);
+        }
+    }
+
+    &__right{
+        @include padding(50px 0px);
+        float: right;
+        width: 50%;
+    }
+}
+
+.icon{
+
+    &--calendar{
+        font-size: 24px;
+    }
+
+    &--criminal{
+        display: block;
+        @include margin(0 auto 20px auto);
+    }
+
+    &--fire{
+        display: block;
+        @include margin(0 0 20px 0);
+        font-size: 48px;
+    }
+}
+
+.form{
+
+    @include clearfix;
+
+    .input{
+        max-width: 390px;
+        @include margin(0 0px 30px auto);
+
+        &--secondary{
+            @include margin(0 0px 10px auto);
+        }
+
+        &__text{
+            color: $color-grey-700;
+        }
+
+        &__alarm{
+            width: calc((100% - 65px)/2);
+            @include margin(0 0 50px 30px);
+        }
+
+        &--select{
+            position: relative;
+            cursor: pointer;
+        
+            &::after{
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                right: 10px;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 5px solid $color-grey-700;
+                border-top: 5px solid transparent;
+                top: 8px;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                right: 10px;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-top: 5px solid $color-grey-700;
+                top: 20px;
+            }
+        }
+
+        &__text{
+            color: $color-black-800;
+        }
+    }
+
+    .select-wrapper{
+        position: relative;
+        @include margin(0 0 280px auto);
+
+    }
+
+    .dropdown{
+        position: absolute;
+        width: 50%;
+        right: 0;
+        top: 60px;
+        border-radius: 2px;
+        box-shadow: 0 2px 16px 0 rgba(33, 43, 54, 0.08), 0 0 0 1px rgba(6, 44, 82, 0.1);
+        background-color: $color-white;
+
+        li{
+            @include padding(12px 16px);
+            cursor: pointer;
+            color: $color-black-800;
+
+            &:hover{
+                background-color: rgba(223, 227, 232, 0.3);
+            }
+        }
+    }
+
+    .dob{
+        position: absolute;
+        width: 360px;
+        left: 50px;
+
+        &__text{
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            @include margin(0 0 10px 0);
+            color: $color-grey-700;
+        }
+    }
+
+    
+    &__button-group{
+        position: relative;
+    }
+        
+    .btn--back{
+        position: absolute;
+        left: 30px;
+    }
+
+    .btn--next{
+        position: absolute;
+        right: 0px;
+    }
+}
+
+.checkbox-wrapper{
+    position: relative;
+    cursor: pointer;
+    @include padding(0 0 0 40px);
+    display: inline-block;
+    line-height: 1.8;
+    user-select: none;
+}
+
+.checkbox-wrapper input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark{
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 0 rgba(22, 29, 37, 0.05);
+    border: solid 1px $color-blue-grey-800;
+    background-color: $color-white;
+}
+
+.checkbox-wrapper input:checked ~ .checkmark{
+    background-color: $color-white;
+    border-radius:3px;
+    border:1px solid $color-bright-cyan;
+}
+
+.checkbox-wrapper .checkmark:after {
+    left: 10px;
+    top: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid $color-bright-cyan;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-wrapper input:checked ~ .checkmark:after {
+    display: block;
+}
+
