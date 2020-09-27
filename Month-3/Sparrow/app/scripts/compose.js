@@ -3,7 +3,7 @@ const composeOverlay = document.querySelector('.compose-overlay');
 const closeButton = document.querySelector('.close-overlay');
 const emailrecipient = document.querySelector('.email-recipient');
 const emailrecipientText = document.getElementById('recipent-text');
-const emailInputContainer = document.querySelector('.emailInput-container');
+const emailInputContainer = document.querySelector('.email-input-container');
 let emailTextarea = document.getElementById('email-textarea');
 
 let value,flag=false,removeIcon,emailBody;
